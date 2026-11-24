@@ -18,4 +18,5 @@ exclude:
   - data/ccgisdata_-_Parcel_*.geojson
   - data/parcel_addresses.csv
   - data/assessor/
+  - data/overture/
   - reports

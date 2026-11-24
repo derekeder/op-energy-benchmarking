@@ -34,7 +34,7 @@ not_on_list,,,240 S OAK,1607406024,17526,condo: condominium (28 PINs),,,,,,26146
 not_on_list,,,948 N AUSTIN OAK PARK,1605320023,17376,commercial: Market (17 units),,,,,,266167 930 (60 m),,yes
 not_on_list,,,1118 HARRISON ST / 1122 HARRISON ST / 1124 HARRISON ST,1618127027,17229,condo: condominium (22 PINs),,,,,,2620605 1137 GARFIELD ST (125 m),,yes
 not_on_list,,,915 S OAK / 917 S OAK,1618307035,16728,condo: condominium (9 PINs),,,,,,2617477 900-910SOakParkAve (63 m),"2617401 Grove Garfield Building (self-reported 15,500 ft², 87 m)",yes
-not_on_list,,,501 S LYMAN OAK PARK,1617105021 1617105035,16030,commercial: Retail/Office,,,,,,2622281 Village Hall (60 m),,yes
+not_on_list,,,501 S LYMAN OAK PARK,1617105021 1617105035,16030,commercial: Retail/Office,,,,,,261411 44 MADISON ST (95 m),,yes
 not_on_list,,,208 MADISON OAK PARK,1608320020 1608320024,15740,commercial,,,,,,261654 433 Lombard Condo Association (39 m),,yes
 not_on_list,,,59 CHICAGO OAK PARK,1608104001,15615,commercial: Market (16 units),,,,,,261725 OPRC II LLC (39 m),"261725 OPRC II LLC (self-reported 17,087 ft², 39 m)",yes
 not_on_list,,,405 HOME AVE,1607323048,15120,condo: condominium (21 PINs),,,,,,2617773 Imperial Manor - Oak Park (56 m),"2618124 Greenplan 1026 Washington LLC (self-reported 13,650 ft², 104 m)",yes
@@ -182,7 +182,7 @@ no_assessor_size,2621764,,14 LAKE ST,1608123021 1608123022,,,,yes,,2022 2023 202
 no_assessor_size,2620607,,1116 GARFIELD ST,1618137007,,,,yes,,2022 2023 2024 2025,,,,
 no_assessor_size,265362,St GeorgeJSO Church,1121 N HUMPHREY AVE / 1125 N HUMPHREY AVE,1605112019,,,11000,yes,,2022 2023 2024 2025,2025,,,
 no_assessor_size,2617965,,1139 RANDOLPH ST,1607314020,,,,yes,,2022 2023 2024 2025,,,,
-no_assessor_size,2622281,Village Hall,123 MADISON ST,1617105001,,,75000,yes,,2022 2023 2024 2025,2022 2023 2024 2025,,,
+no_assessor_size,2622281,Village Hall,123 MADISON ST,1617104032 1617104035,,,75000,yes,,2022 2023 2024 2025,2022 2023 2024 2025,,,
 no_assessor_size,269575,Cornerstone Oak Park,171 N CUYLER AVE,1608118026,,,16363,yes,,2022 2023 2024 2025,2022 2023,,,
 no_assessor_size,26349,,1252 N AUSTIN BLVD,1605127041,,,,yes,,2022 2023 2024 2025,,,,
 no_assessor_size,263225,,21 SOUTH BLVD / 13 SOUTH BLVD,1608305004 1608305005,,,,yes,,2022 2023 2024 2025,,,,

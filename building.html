@@ -1,0 +1,55 @@
+---
+layout: default
+title: Building
+permalink: /building/
+maplibre: true
+scripts:
+  - /assets/js/data.js
+  - /assets/js/building.js
+---
+<main class="page">
+  <header class="page-header">
+    <nav class="nav"><a href="{{ '/' | relative_url }}">Map</a> · <a href="{{ '/buildings/' | relative_url }}">Building list</a></nav>
+    <h1 id="building-title">Loading…</h1>
+    <p class="building-subtitle" id="building-subtitle"></p>
+    <p class="building-status" id="building-status"></p>
+  </header>
+
+  <div class="building-top">
+    <div id="building-map" class="building-map" aria-label="Map of this building's parcel"></div>
+    <section class="building-details">
+      <h2>Details</h2>
+      <dl id="building-details"></dl>
+    </section>
+  </div>
+
+  <div class="trend-charts" id="trend-charts">
+    <section class="building-ghg" id="ghg-section" hidden>
+      <h2>GHG emissions by year</h2>
+      <p class="hint">Total greenhouse gas emissions, metric tons CO2e</p>
+      <div class="chart ghg-chart" id="ghg-chart" role="img" aria-label="Total GHG emissions by year"></div>
+    </section>
+    <section class="building-ghg" id="eui-section" hidden>
+      <h2>Site EUI by year</h2>
+      <p class="hint">Weather-normalized site energy use intensity, kBtu per ft²</p>
+      <div class="chart ghg-chart" id="eui-chart" role="img" aria-label="Weather-normalized site EUI by year"></div>
+    </section>
+  </div>
+
+  <section class="building-years">
+    <h2>Reported data by year</h2>
+    <div class="table-scroll">
+      <table class="years-table" id="years-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="hint" id="years-note"></p>
+  </section>
+
+  <footer class="sources">
+    <a href="https://www.oak-park.us/Community/Sustainability-Resilience/Sustainability-Initiatives-Policies/Building-Benchmarking">Village benchmarking policy</a>
+    ·
+    <a href="https://oakpark-il.beam-portal.org/map/15/properties/">Data source (BEAM)</a>
+  </footer>
+</main>
