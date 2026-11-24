@@ -15,15 +15,16 @@
   var COL = OPData.COL;
   var isReported = OPData.isReported;
 
-  // Total GHG emissions (t CO2e), sequential blue (light = low, dark = high).
+  // Total GHG emissions (t CO2e), sequential yellow-orange-brown (light = low, dark =
+  // high): the decarbmystate.com choropleth steps plus one darker brown for 500+.
   // Breaks match the GHG filter ranges. Only reporting buildings are colored.
   var FILL_COLOR = [
     "step", ["get", "ghgValue"],
-    "#9ec5f4", 50,
-    "#5598e7", 100,
-    "#2a78d6", 250,
-    "#1c5cab", 500,
-    "#0d366b"
+    "#fed98e", 50,
+    "#fe9929", 100,
+    "#d95f0e", 250,
+    "#993404", 500,
+    "#521d03"
   ];
   var MISSING_STROKE = "#7a7974";
 

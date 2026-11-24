@@ -9,6 +9,12 @@ Inputs
                                          --type=building -o /out/buildings.geojson"
   data/parcels.geojson              benchmarking addresses -> parcels (scripts/match_parcels.py)
   data/unlisted_buildings.geojson   unlisted Assessor buildings (scripts/assessor_review.py)
+  data/footprint_overrides.csv      hand-reviewed fixes: key (benchmarking address or
+                                    unlisted id), overture_ids (space-separated), note.
+                                    The listed footprints are used for that building as-is
+                                    (no parcel test or size check) and are taken away from
+                                    every other building. Leave overture_ids empty to show
+                                    the parcel shape instead of any footprint.
 
 Output
   data/footprints.geojson   one feature per parcel match that has footprints, merged
@@ -35,6 +41,8 @@ Size check
   when there's no height). That catches parcels where only a booth or a neighbor's
   sliver is mapped while the building itself is missing from OpenStreetMap.
 
+Overrides in data/footprint_overrides.csv replace all of the above for their building.
+
 Parcels with no footprint get no feature, and the site falls back to the parcel shape.
 
 Requires shapely (pip install shapely).
@@ -58,6 +66,7 @@ BUILDINGS = os.path.join(DATA, "overture", "buildings.geojson")
 PARCELS = os.path.join(DATA, "parcels.geojson")
 UNLISTED = os.path.join(DATA, "unlisted_buildings.geojson")
 OUT = os.path.join(DATA, "footprints.geojson")
+OVERRIDES = os.path.join(DATA, "footprint_overrides.csv")
 SIZES = os.path.join(DATA, "assessor_sizes.csv")
 
 MIN_INSIDE = 0.5         # share of a footprint inside the parcel to keep it whole
@@ -94,16 +103,34 @@ def polygons(geom):
 
 
 def load_footprints():
+    """Returns (footprints usable for matching, every footprint by Overture id)."""
     with open(BUILDINGS) as f:
         features = json.load(f)["features"]
-    out = []
+    usable, by_id = [], {}
     for f in features:
         p = f["properties"]
-        if p.get("is_underground") or p.get("class") in NOT_BUILDINGS:
-            continue
         geom = make_valid(shape(f["geometry"]))
-        out.append({"id": p.get("id") or f.get("id"), "cls": p.get("class"), "geom": geom,
-                    "area": area(geom), "height": p.get("height")})
+        fp = {"id": p.get("id") or f.get("id"), "cls": p.get("class"), "geom": geom,
+              "area": area(geom), "height": p.get("height")}
+        by_id[fp["id"]] = fp
+        if not p.get("is_underground") and p.get("class") not in NOT_BUILDINGS:
+            usable.append(fp)
+    return usable, by_id
+
+
+def load_overrides(by_id):
+    """{key: [footprint, ...]} from data/footprint_overrides.csv; [] means no footprint."""
+    out = {}
+    if not os.path.exists(OVERRIDES):
+        return out
+    with open(OVERRIDES) as f:
+        for r in csv.DictReader(f):
+            ids = r["overture_ids"].split()
+            unknown = [i for i in ids if i not in by_id]
+            if unknown:
+                raise SystemExit("footprint_overrides.csv: unknown Overture id(s) for %s: %s"
+                                 % (r["key"], " ".join(unknown)))
+            out[r["key"].strip()] = [by_id[i] for i in ids]
     return out
 
 
@@ -140,13 +167,16 @@ def capacity(pieces):
     return total
 
 
-def match(parcel_geom, footprints, tree):
-    """Returns [(geometry, area_m2, overture_id, class, clipped, height)] for one parcel."""
+def match(parcel_geom, footprints, tree, claimed):
+    """Returns [(geometry, area_m2, overture_id, class, clipped, height)] for one parcel.
+    Footprints in claimed (assigned by an override) are skipped."""
     parcel = make_valid(shape(parcel_geom))
     parcel_area = area(parcel)
     pieces = []
     for n in tree.query(parcel, predicate="intersects"):
         fp = footprints[n]
+        if fp["id"] in claimed:
+            continue
         inside = fp["geom"].intersection(parcel)
         inside_area = area(inside)
         if fp["area"] and inside_area / fp["area"] >= MIN_INSIDE:
@@ -159,6 +189,10 @@ def match(parcel_geom, footprints, tree):
         return []
     pieces.sort(key=lambda p: -p[1])
     return [pieces[0]] + [p for p in pieces[1:] if p[1] >= MIN_AREA and p[3] not in SKIP_EXTRA]
+
+
+def override_piece(fp):
+    return (fp["geom"], fp["area"], fp["id"], fp["cls"], False, fp["height"])
 
 
 def feature(key, kind, pieces):
@@ -176,17 +210,24 @@ def feature(key, kind, pieces):
 
 
 def main():
-    footprints = load_footprints()
+    footprints, by_id = load_footprints()
     tree = STRtree([fp["geom"] for fp in footprints])
+    overrides = load_overrides(by_id)
+    claimed = {fp["id"] for fps in overrides.values() for fp in fps}
     sizes = floor_areas()
-    out, missing, too_small = [], [], []
+    out, missing, too_small, seen = [], [], [], set()
     for path, kind, key_prop in [(PARCELS, "listed", "address"), (UNLISTED, "unlisted", "id")]:
         with open(path) as f:
             for parcel in json.load(f)["features"]:
                 if not parcel["geometry"]:
                     continue
                 key = parcel["properties"][key_prop]
-                pieces = match(parcel["geometry"], footprints, tree)
+                seen.add(key)
+                if key in overrides:
+                    if overrides[key]:
+                        out.append(feature(key, kind, [override_piece(fp) for fp in overrides[key]]))
+                    continue
+                pieces = match(parcel["geometry"], footprints, tree, claimed)
                 if pieces and sizes.get(key, 0) > MAX_RATIO * capacity(pieces):
                     too_small.append((kind, key, sizes[key], round(sum(p[1] for p in pieces) * SQFT_PER_M2)))
                     continue
@@ -194,6 +235,10 @@ def main():
                     out.append(feature(key, kind, pieces))
                 else:
                     missing.append((kind, key))
+    # Overrides for buildings with no parcel match.
+    for key, fps in overrides.items():
+        if key not in seen and fps:
+            out.append(feature(key, "unlisted" if ":" in key else "listed", [override_piece(fp) for fp in fps]))
     for f in out:
         g = f["geometry"]
         g["coordinates"] = [[[[round(x, 7), round(y, 7)] for x, y in ring] for ring in poly]
@@ -202,7 +247,8 @@ def main():
         json.dump({"type": "FeatureCollection", "features": out}, f, separators=(",", ":"))
     clipped = [f["properties"]["key"] for f in out if f["properties"]["clipped"]]
     print("%d parcel matches with footprints (%d clipped at the parcel line), %d without, "
-          "%d dropped by the size check" % (len(out), len(clipped), len(missing), len(too_small)))
+          "%d dropped by the size check, %d overrides" % (len(out), len(clipped), len(missing),
+                                                          len(too_small), len(overrides)))
     for kind, key, sf, fp_sf in too_small:
         print("  too small: %s %s (floor area %d ft², footprint %d ft²)" % (kind, key, sf, fp_sf))
     for kind, key in missing:

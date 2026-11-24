@@ -58,6 +58,14 @@ window.OPData = (function () {
   };
   var IDENTITY = [COL.id, COL.name, COL.address, COL.address1, COL.owner];
 
+  // Rows filed under the wrong Feature ID, moved to the right building. The
+  // address is cleared so the row takes the building's address from another year.
+  var ID_FIXES = [
+    // 2022: the garage's report (named "OPRF Garage", 90,900 ft²) was filed under
+    // the high school's ID, at the school's address.
+    { year: "2022", from: "269818", to: "2621397", name: "OPRF Garage" }
+  ];
+
   function num(v) {
     var n = parseFloat(v);
     return isNaN(n) ? null : n;
@@ -79,6 +87,14 @@ window.OPData = (function () {
   }
 
   function buildYears(raw, years, unlisted) {
+    ID_FIXES.forEach(function (fix) {
+      (raw[fix.year] || []).forEach(function (row) {
+        if ((row[COL.id] || "").trim() === fix.from && (row[COL.name] || "").trim() === fix.name) {
+          row[COL.id] = fix.to;
+          row[COL.address] = "";
+        }
+      });
+    });
     var byId = {};   // id -> { year: row }
     var maxGfa = {}; // id -> largest self-reported floor area
     years.forEach(function (y) {
@@ -89,6 +105,24 @@ window.OPData = (function () {
         (byId[id] = byId[id] || {})[y] = row;
         var g = num(row[COL.gfa]);
         if (g !== null) maxGfa[id] = Math.max(maxGfa[id] || 0, g);
+      });
+    });
+
+    // Some exports leave the address blank (OPRF Garage in 2023 and 2024, and the
+    // ID_FIXES rows above). Map
+    // shapes are matched by address, so borrow it from the nearest year that has one.
+    Object.keys(byId).forEach(function (id) {
+      var withAddress = Object.keys(byId[id]).filter(function (y) {
+        return (byId[id][y][COL.address] || "").trim();
+      });
+      if (!withAddress.length) return;
+      Object.keys(byId[id]).forEach(function (y) {
+        var row = byId[id][y];
+        if ((row[COL.address] || "").trim()) return;
+        var src = withAddress.slice().sort(function (a, b) {
+          return Math.abs(a - y) - Math.abs(b - y) || b - a;
+        })[0];
+        row[COL.address] = byId[id][src][COL.address];
       });
     });
 

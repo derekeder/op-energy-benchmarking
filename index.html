@@ -38,8 +38,18 @@ scripts:
           <option value="500-">500 t CO2e and up</option>
         </select>
       </label>
+      <label class="field">
+        <span>Site energy use intensity (weather normalized)</span>
+        <select class="filter" data-col="Weather Normalized Site EUI (kBtu/ft²)">
+          <option value="">All energy use</option>
+          <option value="0-50">Under 50 kBtu/ft²</option>
+          <option value="50-100">50–99 kBtu/ft²</option>
+          <option value="100-200">100–199 kBtu/ft²</option>
+          <option value="200-">200 kBtu/ft² and up</option>
+        </select>
+      </label>
       <p class="hint" id="filter-hint" hidden>
-        <span id="filter-hint-text">Buildings that didn't report are hidden while an emissions filter is set.</span>
+        <span id="filter-hint-text">Buildings that didn't report are hidden while an emissions or energy use filter is set.</span>
         <button type="button" id="clear-filters">Clear filters</button>
       </p>
     </section>
@@ -74,11 +84,11 @@ scripts:
       <h2>Greenhouse gas emissions</h2>
       <p class="hint">Total, metric tons CO2e per year</p>
       <ul class="map-legend">
-        <li><i class="dot" style="background:#0d366b"></i>500 and up</li>
-        <li><i class="dot" style="background:#1c5cab"></i>250–499</li>
-        <li><i class="dot" style="background:#2a78d6"></i>100–249</li>
-        <li><i class="dot" style="background:#5598e7"></i>50–99</li>
-        <li><i class="dot" style="background:#9ec5f4"></i>Under 50</li>
+        <li><i class="dot" style="background:#521d03"></i>500 and up</li>
+        <li><i class="dot" style="background:#993404"></i>250–499</li>
+        <li><i class="dot" style="background:#d95f0e"></i>100–249</li>
+        <li><i class="dot" style="background:#fe9929"></i>50–99</li>
+        <li><i class="dot" style="background:#fed98e"></i>Under 50</li>
         <li><i class="dot dot-hollow"></i>Did not report</li>
       </ul>
       <p class="hint" id="map-status"></p>

@@ -31,7 +31,7 @@ address,corrected_address,pins,note
 901 HIGHLAND AVE,301 HARRISON ST,,Harrison and Highland (301-11 Harrison / 901-09 S Highland)
 100 N EUCLID AVE,,1607225093,Main Fire Station (tax-exempt parcel)
 201 N SCOVILLE AVE,,1607221008,Oak Park and River Forest High School campus (tax-exempt parcel)
-137 SCOVILLE,,1607220004,OPRF garage; own tax-exempt parcel directly west of the high school campus (south of 1607214021)
+137 SCOVILLE,,1607221008,OPRF garage; on the high school campus parcel at Lake St and Scoville Ave
 201 SOUTH BLVD,,1608302026,Public Works (tax-exempt parcel)
 325 S KENILWORTH AVE,,1607318017,Brooks Middle School (tax-exempt parcel)
 715 HIGHLAND AVE,,1617117028,Longfellow Elementary (tax-exempt parcel)
@@ -52,3 +52,4 @@ address,corrected_address,pins,note
 924 ONTARIO ST,,1607115053,"Greenplan Ontario; Assessor building at 922 Ontario matches self-reported 11,052 ft² exactly"
 612 HARRISON ST,,1618227026,Clarence and Harrison I; Assessor building on same block matches self-reported size (4%) - verify
 123 MADISON ST,,1617104035 1617104032,Village Hall; tax-exempt parcel listed by the Assessor as 529 S Lyman Ave
+900 S EAST AVE,,1618411001,East Ave Fire Station; tax-exempt parcel

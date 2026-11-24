@@ -41,7 +41,7 @@ not_on_list,,,405 HOME AVE,1607323048,15120,condo: condominium (21 PINs),,,,,,26
 not_on_list,,,1135 SCHNEIDER AVE,1606316030,15018,condo: condominium (25 PINs),,,,,,,,yes
 not_on_list,,,302 N AUSTIN OAK PARK,1608305023,14840,commercial: Market (19 units),,,,,,263414 Pleasant Circle South (43 m),,yes
 not_on_list,,,403 N MARION ST,1607101017,14643,condo: condominium (13 PINs),,,,,,2618691 412 N MARION ST (78 m),,yes
-not_on_list,,,520 W HARRISON ST / 522 W HARRISON ST / 838 S SCOVILLE AVE,1618229036,14637,condo: condominium (18 PINs),,,,,,2613100 East Ave Fire Station (98 m),,yes
+not_on_list,,,520 W HARRISON ST / 522 W HARRISON ST / 838 S SCOVILLE AVE,1618229036,14637,condo: condominium (18 PINs),,,,,,,,yes
 not_on_list,,,333 S OAK,1607320024,14480,condo: condominium (13 PINs),,,,,,2614678 800 WASHINGTON BLVD (33 m),,yes
 not_on_list,,,1022 AUSTIN AVE / 1022 S AUSTIN BLVD / 1024 AUSTIN AVE,1617331037,14475,condo: condominium (12 PINs),,,,,,267225 1000 Austin (78 m),,yes
 not_on_list,,,135 N RIDGELAND AVE / 137 N RIDGELAND AVE / 139 N RIDGELAND AVE,1607223027,14394,condo: condominium (9 PINs),,,,,,269858 Greenplan 418 Lake LLC (66 m),,yes
@@ -234,9 +234,9 @@ no_assessor_size,29103416,Elmwood & Garfield,429-435 Garfield Ave &amp; 939 S. E
 no_assessor_size,29822589,OPRF Infant Welfare Society,28 Madison St,,,,13616,yes,,2023,2023,,,
 no_assessor_size,29929514,151 N Kenilworth Condominium Association,151 N Kenilworth Ave,,,,98533,yes,,2023,2023,,,
 no_assessor_size,2666659,Greenplan 1350 Austin LLC,1348-1352 N. Austin Blvd./7-9 Greenfield St. / 1348-1352 N. Austin Blvd./7-9 Greenfield St.,,,,15207,yes,,2023 2024,2023 2024,,,
-no_assessor_size,2613100,East Ave Fire Station,900 S EAST AVE,1618500011,,,5100,yes,yes,2023 2024 2025,2023 2024 2025,,,
+no_assessor_size,2613100,East Ave Fire Station,900 S EAST AVE,1618411001,,,5100,yes,yes,2023 2024 2025,2023 2024 2025,,,
 no_assessor_size,2621601,Central Pump Station,102 N Lombard Avenue,,,,9045,yes,yes,2023,2023,,,
-no_assessor_size,2621397,OPRF Garage,137 SCOVILLE,1607220004,,,90900,yes,,2023 2024 2025,2023 2024 2025,,,
+no_assessor_size,2621397,OPRF Garage,137 SCOVILLE,1607221008,,,90900,yes,,2023 2024 2025,2023 2024 2025,,,
 no_assessor_size,261756,Augusta Fire Station,212 AUGUSTA ST,1605310033,,,2000,yes,yes,2023 2024 2025,2023 2024 2025,,,
 no_assessor_size,267538,South Pump Station,207 Garfield,,,,1800,yes,yes,2023,,,,
 no_assessor_size,2622046,Belmont Village Oak Park,1033 MADISON ST / 1035 MADISON ST,1618102024,,,101450,yes,,2023 2024 2025,2023 2024,,,

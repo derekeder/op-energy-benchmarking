@@ -6,8 +6,6 @@
 
   // Rows of the yearly table: [label, CSV column, decimals] (decimals null = text).
   var FIELDS = [
-    ["Floor area (ft², self-reported)", COL.gfa, 0],
-    ["Property type", COL.type, null],
     ["Residential units", "Multifamily Housing - Total Number of Residential Living Units", 0],
     ["Total GHG emissions (t CO2e)", COL.ghg, 1],
     ["Site EUI, weather normalized (kBtu/ft²)", COL.eui, 1],
@@ -19,7 +17,6 @@
     ["Water use (kgal)", "Water Use (All Water Sources) (kgal)", 1],
     ["Water use intensity (gal/ft²)", "Water Use Intensity (All Water Sources) (gal/ft²)", 1],
     ["Water score (multifamily only)", "Water Score (Multifamily Only)", 0],
-    ["Data administrator", "Property Data Administrator", null],
     ["Notes", "Property Notes", null]
   ];
 
@@ -273,6 +270,7 @@
       ["Address", addresses.length ? addresses.join("<br>") : esc(any._addresses || address || "—"), true],
       ["Property type", latest(rows, COL.type) || (any._assessor_desc || "")],
       ["Owner", latest(rows, COL.owner)],
+      ["Data administrator", latest(rows, "Property Data Administrator")],
       ["Floor area (self-reported)", selfSf ? fmt(num(selfSf)) + " ft²" : ""],
       ["Floor area (Cook County Assessor)", any._assessor_sf ? fmt(any._assessor_sf) + " ft²" : ""],
       ["Residential units", (function (u) { return u === null ? "" : fmt(u); })(num(latest(rows, "Multifamily Housing - Total Number of Residential Living Units")))],
