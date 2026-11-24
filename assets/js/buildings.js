@@ -100,9 +100,10 @@
         var rep = isReported(r);
         var name = (r[COL.name] || "").trim();
         var address = (r[COL.address] || r["Address Line 1"] || "").trim();
+        var href = OPData.buildingUrl(baseurl, r[COL.id]);
         var building = name
-          ? "<strong>" + esc(name) + "</strong><br><span class=\"muted\">" + esc(address) + "</span>"
-          : "<strong>" + esc(address || "Unknown address") + "</strong>";
+          ? '<a href="' + href + '"><strong>' + esc(name) + "</strong></a><br><span class=\"muted\">" + esc(address) + "</span>"
+          : '<a href="' + href + '"><strong>' + esc(address || "Unknown address") + "</strong></a>";
         var cells = rep
           ? "<td>" + esc(r[COL.type] || "") + "</td>" +
             '<td class="num">' + fmt(num(r[COL.gfa])) + "</td>" +

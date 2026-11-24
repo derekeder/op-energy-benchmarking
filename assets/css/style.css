@@ -148,3 +148,36 @@ body {
 .buildings-table th[aria-sort="descending"] button::after { content: "▼"; opacity: 1; color: var(--text-primary); }
 .buildings-table th[aria-sort] { color: var(--text-primary); }
 .buildings-table th button:hover { color: var(--text-primary); }
+
+/* ---------- building detail page ---------- */
+.building-subtitle { color: var(--text-secondary); margin: 0 0 8px; }
+.building-status { color: var(--text-secondary); font-size: 0.9rem; margin: 0 0 16px; max-width: 75ch; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
+.badge.reported { background: #e3eefb; color: #1c5cab; }
+.badge.missing { background: #eeede9; color: #52514e; }
+.building-top { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px; margin-bottom: 24px; }
+.building-map { height: 320px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.building-map.no-map { display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.9rem; background: #f4f3f0; }
+.trend-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 24px; }
+.building-ghg { min-width: 0; }
+.building-ghg .hint { margin: -6px 0 8px; }
+.ghg-chart { max-width: 640px; }
+@media (max-width: 720px) { .trend-charts { grid-template-columns: 1fr; } }
+.building-details h2, .building-ghg h2, .building-years h2 { font-size: 1.05rem; margin: 0 0 10px; }
+.building-details dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; font-size: 0.9rem; }
+.building-details dt { color: var(--text-secondary); }
+.building-details dd { margin: 0; }
+.years-table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.years-table th, .years-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.years-table thead th { background: #f4f3f0; font-size: 0.8rem; color: var(--text-secondary); }
+.years-table tbody th { text-align: left; font-weight: 400; color: var(--text-secondary); }
+.years-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.years-table .text { text-align: right; }
+.years-table .empty { color: var(--text-muted); }
+.building-years .hint { margin-top: 8px; }
+.buildings-table td a { color: inherit; }
+.popup-link { margin: 8px 0 0; font-size: 0.85rem; }
+@media (max-width: 720px) {
+  .building-top { grid-template-columns: 1fr; }
+  .building-map { height: 240px; }
+}

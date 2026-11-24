@@ -186,6 +186,11 @@
   }
 
   function popupHTML(p) {
+    return popupBody(p).replace(/<\/div>$/, '<p class="popup-link"><a href="' +
+      OPData.buildingUrl(baseurl, p.id) + '">View building details \u2192</a></p></div>');
+  }
+
+  function popupBody(p) {
     var title = esc(p.name || p.address || "Property");
     if (p.unlisted) {
       return '<div class="popup"><h3>' + title + "</h3>" +

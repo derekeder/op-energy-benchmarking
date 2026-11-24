@@ -99,7 +99,8 @@ window.OPData = (function () {
     var rowsByYear = {};
     years.forEach(function (y) {
       var extra = unlisted.map(function (f) {
-        var row = { _listed: false, _unlisted: true, _geometry: f.geometry,
+        var row = { _listed: false, _unlisted: true, _geometry: f.geometry, _pins: f.properties.pins,
+                    _addresses: f.properties.addresses,
                     _assessor_sf: f.properties.assessor_sf, _assessor_desc: f.properties.description };
         IDENTITY.forEach(function (c) { row[c] = ""; });
         row[COL.id] = f.properties.id;
@@ -189,5 +190,10 @@ window.OPData = (function () {
     };
   }
 
-  return { yearPicker: yearPicker, COL: COL, MIN_GFA: MIN_GFA, num: num, isReported: isReported, parseCSV: parseCSV, loadYears: loadYears };
+  // Link to a building's detail page.
+  function buildingUrl(baseurl, id) {
+    return (baseurl || "") + "/building/?id=" + encodeURIComponent(id);
+  }
+
+  return { buildingUrl: buildingUrl, yearPicker: yearPicker, COL: COL, MIN_GFA: MIN_GFA, num: num, isReported: isReported, parseCSV: parseCSV, loadYears: loadYears };
 })();
