@@ -17,5 +17,5 @@ exclude:
   - scripts
   - data/ccgisdata_-_Parcel_*.geojson
   - data/parcel_addresses.csv
-  - data/assessor
+  - data/assessor/
   - reports

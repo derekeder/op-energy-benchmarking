@@ -34,6 +34,16 @@ Output: reports/assessor_review.csv, one row per finding:
                          has no size. Listed for completeness.
   no_assessor_size       Covered on the site, but no Assessor size (usually tax-exempt).
 
+Also writes data/unlisted_buildings.geojson: every not_on_list and
+not_on_list_adjacent building, which the site adds as covered buildings that
+never reported. Rows with a likely_match or an adjacent listed building may be
+duplicates of a listed building on the wrong parcel; fixing that parcel match
+(data/address_corrections.csv) drops them from this file on the next run.
+
+And data/assessor_sizes.csv: the Assessor building area for each listed
+Feature ID that has one (summed across its parcels), used by the site's
+compliance-by-floor-area chart.
+
 Downloads are cached in data/assessor/ (delete to refresh).
 
 Usage: python3 scripts/assessor_review.py
@@ -51,6 +61,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 CACHE = os.path.join(DATA, "assessor")
 OUT = os.path.join(ROOT, "reports", "assessor_review.csv")
+UNLISTED_OUT = os.path.join(DATA, "unlisted_buildings.geojson")
+SIZES_OUT = os.path.join(DATA, "assessor_sizes.csv")
 API = "https://datacatalog.cookcountyil.gov/resource"
 MIN_SF = 10000
 ADJACENT_M = 30  # parcel-centroid distance treated as "next to" a listed building
@@ -226,8 +238,9 @@ def main():
     # Parcel centroids, for locating unlisted buildings relative to listed ones.
     raw = sorted(glob.glob(os.path.join(DATA, "ccgisdata_-_Parcel_*.geojson")))[-1]
     with open(raw, encoding="utf-8") as f:
-        centroid = {}
+        centroid, geometry = {}, {}
         for ft in json.load(f)["features"]:
+            geometry[ft["properties"]["pin10"]] = ft["geometry"]
             pts = [p for poly in ft["geometry"]["coordinates"] for p in poly[0]]
             centroid[ft["properties"]["pin10"]] = (sum(p[0] for p in pts) / len(pts),
                                                    sum(p[1] for p in pts) / len(pts))
@@ -277,9 +290,11 @@ def main():
             "years_reported": " ".join(b["years_reported"]),
             "nearest_listed": "",
             "likely_match": "",
+            "added_to_site": "",
         })
 
     # Assessor buildings >= 10k with no benchmarking building on any of their parcels.
+    unlisted = []
     for rid, rec in records.items():
         if (rec["sf"] or 0) < MIN_SF or rec["pins"] & set(listed_pins):
             continue
@@ -306,8 +321,30 @@ def main():
                 b = buildings[fid]
                 likely = (f"{fid} {(b['names'] or b['addresses'] or [''])[0]} "
                           f"(self-reported {int(b['max_gfa']):,} ft², {round(d)} m)")
+        issue = "not_on_list_adjacent" if dist is not None and dist <= ADJACENT_M else "not_on_list"
+        added = True  # every unlisted Assessor building >= 10k is added to the site
+        if added:
+            polys = []
+            for p in sorted(rec["pins"]):
+                g = geometry.get(p)
+                if g:
+                    polys.extend(g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]])
+            unlisted.append({
+                "type": "Feature",
+                "properties": {
+                    "id": rid,
+                    "address": rec["address"].split(" / ")[0],
+                    "addresses": rec["address"],
+                    "pins": sorted(rec["pins"]),
+                    "assessor_sf": int(rec["sf"]),
+                    "description": f"{rec['source']}: {rec['description']}".strip(": "),
+                },
+                "geometry": {"type": "MultiPolygon", "coordinates": [
+                    [[[round(x, 6), round(y, 6)] for x, y, *_ in ring] for ring in poly] for poly in polys
+                ]} if polys else None,
+            })
         rows.append({
-            "issue": "not_on_list_adjacent" if dist is not None and dist <= ADJACENT_M else "not_on_list",
+            "issue": issue,
             "feature_id": "",
             "name": "",
             "address": rec["address"],
@@ -321,6 +358,7 @@ def main():
             "years_reported": "",
             "nearest_listed": near,
             "likely_match": likely,
+            "added_to_site": "yes" if added else "",
         })
 
     order = ["not_on_list", "not_on_list_adjacent", "excluded_assessor_10k", "assessor_under_10k",
@@ -331,6 +369,20 @@ def main():
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
         w.writerows(rows)
+
+    with open(SIZES_OUT, "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["feature_id", "assessor_sf"])
+        for fid in sorted(buildings):
+            if buildings[fid]["assessor_sf"]:
+                w.writerow([fid, int(buildings[fid]["assessor_sf"])])
+    print(f"wrote {SIZES_OUT}")
+
+    unlisted.sort(key=lambda f: -f["properties"]["assessor_sf"])
+    with open(UNLISTED_OUT, "w", encoding="utf-8") as f:
+        json.dump({"type": "FeatureCollection", "features": unlisted}, f, separators=(",", ":"))
+    print(f"wrote {UNLISTED_OUT}: {len(unlisted)} unlisted buildings "
+          f"({sum(1 for u in unlisted if not u['geometry'])} without a parcel shape)")
 
     covered = [b for b in buildings.values() if b["covered"]]
     sized = [b for b in covered if b["assessor_sf"]]

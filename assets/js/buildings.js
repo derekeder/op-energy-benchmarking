@@ -5,7 +5,7 @@
   var num = OPData.num;
   var isReported = OPData.isReported;
 
-  var select = document.getElementById("year-select");
+  var select = OPData.yearPicker("year-select");
   var search = document.getElementById("search");
   var body = document.getElementById("buildings-body");
   var statusEl = document.getElementById("list-status");
@@ -109,8 +109,11 @@
             '<td class="num ghg">' + fmt(num(r[COL.ghg]), 1) + "</td>" +
             '<td class="num">' + fmt(num(r[COL.eui]), 1) + "</td>" +
             '<td class="num">' + fmt(num(r[COL.score])) + "</td>"
-          : '<td colspan="5" class="not-reported">Did not report' +
-            (r._listed === false ? " (missing from this year's list)" : "") + "</td>";
+          : '<td colspan="5" class="not-reported">' +
+            (r._unlisted
+              ? "Not on the Village's list (Assessor: " + fmt(r._assessor_sf) + " ft²)"
+              : "Did not report" + (r._listed === false ? " (missing from this year's list)" : "")) +
+            "</td>";
         return '<tr class="' + (rep ? "" : "missing") + '">' +
           '<td class="num rank">' + (r._rank || "") + "</td>" +
           "<td>" + building + "</td>" + cells + "</tr>";

@@ -35,6 +35,16 @@ body {
 
 .field { display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; color: var(--text-secondary); }
 .field + .field { margin-top: 12px; }
+.year-buttons { display: inline-flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: #fff; align-self: flex-start; }
+.year-buttons button {
+  font: inherit; font-size: 0.95rem; color: var(--text-secondary); background: none;
+  border: none; border-left: 1px solid var(--border); padding: 6px 14px; cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+.year-buttons button:first-child { border-left: none; }
+.year-buttons button:hover { color: var(--text-primary); background: #f4f3f0; }
+.year-buttons button[aria-checked="true"] { background: var(--reported); color: #fff; font-weight: 600; }
+.year-buttons button:focus-visible { outline: 2px solid var(--reported); outline-offset: -2px; }
 #filter-hint { margin-top: 10px; }
 #clear-filters { font: inherit; color: var(--text-secondary); background: none; border: none; padding: 0; text-decoration: underline; cursor: pointer; }
 .field select { font: inherit; font-size: 1rem; color: var(--text-primary); padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; background: #fff; }
@@ -51,11 +61,8 @@ body {
 
 .chart { position: relative; }
 .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
-.chart .col { cursor: pointer; }
-.chart .col:not(.selected) rect { opacity: 0.55; }
 .chart .size-row { cursor: default; }
 .chart .size-row:hover .bar { filter: brightness(0.95); }
-.chart .col:hover rect { opacity: 1; }
 .chart text { font-family: inherit; }
 .tooltip {
   position: absolute; pointer-events: none; z-index: 2;
@@ -70,6 +77,7 @@ body {
 .table-view table { border-collapse: collapse; width: 100%; margin-top: 6px; }
 .table-view th, .table-view td { text-align: right; padding: 3px 4px; border-bottom: 1px solid var(--border); }
 .table-view th:first-child, .table-view td:first-child { text-align: left; }
+.table-view tbody th { color: var(--text-primary); font-weight: 600; }
 .table-view td { color: var(--text-primary); font-variant-numeric: tabular-nums; }
 
 .map-key {

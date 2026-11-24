@@ -1,0 +1,8 @@
+<div class="field">
+  <span id="year-label">Reporting year</span>
+  <div class="year-buttons" id="year-select" role="radiogroup" aria-labelledby="year-label">
+    {% for y in site.benchmarking_years %}
+    <button type="button" role="radio" data-year="{{ y }}" aria-checked="{% if forloop.last %}true{% else %}false{% endif %}" tabindex="{% if forloop.last %}0{% else %}-1{% endif %}">{{ y }}</button>
+    {% endfor %}
+  </div>
+</div>

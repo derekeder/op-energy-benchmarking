@@ -15,18 +15,11 @@ scripts:
   <p class="lede">
     Every building covered by Oak Park's benchmarking ordinance, ordered by total greenhouse gas
     emissions. Click a column heading to sort by it. Total emissions largely track building size, so floor area and site EUI
-    (energy use per square foot) are shown alongside. Buildings that didn't report are listed last.
+    (energy use per square foot) are shown alongside. Buildings that didn't report are listed last, including buildings the Cook County Assessor puts at 10,000 ft² or more that aren't on the Village's list.
   </p>
 
   <div class="list-controls">
-    <label class="field">
-      <span>Reporting year</span>
-      <select id="year-select">
-        {% for y in site.benchmarking_years reversed %}
-        <option value="{{ y }}">{{ y }}</option>
-        {% endfor %}
-      </select>
-    </label>
+{% include year-buttons.html %}
     <label class="field">
       <span>Search</span>
       <input type="search" id="search" placeholder="Name, address or owner">

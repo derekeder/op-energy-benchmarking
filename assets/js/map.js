@@ -23,7 +23,7 @@
   ];
   var MISSING_STROKE = "#7a7974";
 
-  var select = document.getElementById("year-select");
+  var select = OPData.yearPicker("year-select");
   var filterSelects = Array.prototype.slice.call(document.querySelectorAll("select.filter"));
   var filterHint = document.getElementById("filter-hint");
   var statusEl = document.getElementById("map-status");
@@ -77,9 +77,10 @@
     return Promise.all([years, geo, parcelReq]);
   }
 
-  // Floor area for a row: that year's value, else the same building's value
-  // from the nearest other year (non-reporters often leave it blank).
-  var gfaById = {}; // { featureId: { year: gfa } }
+  // Floor area for the size chart: the Cook County Assessor's building area when
+  // there is one; otherwise (mostly tax-exempt property) the self-reported value
+  // for that year, else the same building's value from the nearest other year.
+  var gfaById = {}; // { featureId: { year: self-reported gfa } }
 
   function indexFloorArea() {
     YEARS.forEach(function (y) {
@@ -92,6 +93,7 @@
   }
 
   function floorArea(row, year) {
+    if (row._assessor_sf) return row._assessor_sf;
     var own = num(row[COL.gfa]);
     if (own !== null) return own;
     var byYear = gfaById[row[COL.id]];
@@ -155,7 +157,10 @@
       ghgValue: num(row[COL.ghg]) || 0,
       score: score === null ? -1 : score,
       reported: isReported(row),
-      listed: row._listed !== false
+      listed: row._listed !== false,
+      unlisted: !!row._unlisted,
+      assessorSf: row._assessor_sf || 0,
+      assessorDesc: row._assessor_desc || ""
     };
   }
 
@@ -170,7 +175,7 @@
     var features = [];
     rows.forEach(function (row) {
       var address = (row[COL.address] || "").trim();
-      var geom = parcelIndex[address];
+      var geom = row._geometry || parcelIndex[address];
       if (!geom) {
         var coords = geocoded[address];
         if (coords) geom = { type: "Point", coordinates: coords };
@@ -182,6 +187,12 @@
 
   function popupHTML(p) {
     var title = esc(p.name || p.address || "Property");
+    if (p.unlisted) {
+      return '<div class="popup"><h3>' + title + "</h3>" +
+        "<p><em>Not on the Village's benchmarking list.</em> The Cook County Assessor puts this " +
+        "building at " + fmt(p.assessorSf) + " ft², over the 10,000 ft² threshold.</p>" +
+        (p.assessorDesc ? '<p class="muted">' + esc(p.assessorDesc) + "</p>" : "") + "</div>";
+    }
     if (!p.reported) {
       return '<div class="popup"><h3>' + title + "</h3><p>" + esc(p.address) +
         "</p><p><em>Did not report this year" +
@@ -272,110 +283,35 @@
     return node;
   }
 
-  // Rect with only the top corners rounded (data end), flat at the bottom.
-  function topRoundedPath(x, y, w, h, r) {
-    r = Math.min(r, h, w / 2);
-    return "M" + x + "," + (y + h) + "V" + (y + r) +
-      "Q" + x + "," + y + " " + (x + r) + "," + y +
-      "H" + (x + w - r) + "Q" + (x + w) + "," + y + " " + (x + w) + "," + (y + r) +
-      "V" + (y + h) + "Z";
-  }
+  // One chart: an "All buildings" bar for the selected year, then one bar per
+  // floor-area range, all on the same count scale (the ranges sum to the top bar).
+  // Each bar is reported vs. did not report.
+  function renderChart(year) {
+    var c = compliance(year);
+    var overall = { label: "All buildings", reported: c.reported, missing: c.missing, total: c.total, overall: true };
+    var bins = complianceBySize(year);
+    var data = [overall].concat(bins);
 
-  function renderChart(selected) {
-    var data = YEARS.map(compliance);
-    var W = 320, H = 190, m = { top: 22, right: 4, bottom: 24, left: 34 };
-    var pw = W - m.left - m.right, ph = H - m.top - m.bottom;
-    var max = Math.ceil(Math.max.apply(null, data.map(function (d) { return d.total; })) / 100) * 100;
-    var y = function (v) { return m.top + ph - (v / max) * ph; };
-    var band = pw / data.length, colW = Math.min(44, band * 0.55), GAP = 2;
+    var rowH = 22, rowGap = 10, sectionGap = 14, labelW = 128, rateW = 40;
+    var W = 400, H = data.length * (rowH + rowGap) - rowGap + sectionGap + 4;
+    var pw = W - labelW - rateW, GAP = 2;
 
     var old = chartEl.querySelector("svg");
     if (old) old.remove();
     var svg = el("svg", { viewBox: "0 0 " + W + " " + H, "aria-hidden": "true" });
 
-    // gridlines + y ticks
-    for (var t = 0; t <= max; t += 100) {
-      svg.appendChild(el("line", { x1: m.left, x2: W - m.right, y1: y(t), y2: y(t),
-        stroke: t === 0 ? "#b5b4ae" : "var(--grid)", "stroke-width": 1 }));
-      svg.appendChild(el("text", { x: m.left - 6, y: y(t) + 4, "text-anchor": "end",
-        "font-size": 11, fill: "var(--text-muted)" }, fmt(t)));
-    }
-
     data.forEach(function (d, i) {
-      var cx = m.left + band * i + band / 2, x = cx - colW / 2;
-      var g = el("g", { "class": "col" + (d.year === selected ? " selected" : "") });
-
-      // hit target: the whole band
-      g.appendChild(el("rect", { x: m.left + band * i, y: m.top, width: band, height: ph, fill: "transparent" }));
-
-      var yRep = y(d.reported), hRep = y(0) - yRep;
-      g.appendChild(el("rect", { x: x, y: yRep, width: colW, height: hRep, fill: "var(--reported)" }));
-      var yMis = y(d.total), hMis = Math.max(0, yRep - GAP - yMis);
-      if (d.missing > 0) {
-        g.appendChild(el("path", { d: topRoundedPath(x, yMis, colW, hMis, 4), fill: "var(--missing)" }));
-      }
-
-      // reported count inside the blue segment, rate on the cap
-      if (hRep > 18) {
-        g.appendChild(el("text", { x: cx, y: y(0) - 7, "text-anchor": "middle", "font-size": 11,
-          fill: "#ffffff", "font-weight": 600 }, fmt(d.reported)));
-      }
+      var y = i * (rowH + rowGap) + 2 + (i > 0 ? sectionGap : 0), cy = y + rowH / 2 + 4;
       var rate = d.total ? Math.round(100 * d.reported / d.total) : 0;
-      g.appendChild(el("text", { x: cx, y: yMis - 6, "text-anchor": "middle", "font-size": 11,
-        fill: "var(--text-primary)" }, rate + "%"));
-      g.appendChild(el("text", { x: cx, y: H - 6, "text-anchor": "middle", "font-size": 12,
-        fill: d.year === selected ? "var(--text-primary)" : "var(--text-secondary)",
-        "font-weight": d.year === selected ? 700 : 400 }, d.year));
-
-      g.addEventListener("click", function () { setYear(d.year); });
-      g.addEventListener("mousemove", function (e) {
-        tooltip.show(e, "<strong>" + d.year + "</strong> · " + rate + "% reported<br>" +
-          fmt(d.reported) + ' <span class="muted">reported</span> · ' +
-          fmt(d.missing) + ' <span class="muted">did not</span><br>' +
-          '<span class="muted">' + fmt(d.total) + " covered buildings</span>");
-      });
-      g.addEventListener("mouseleave", tooltip.hide);
-      svg.appendChild(g);
-    });
-
-    chartEl.insertBefore(svg, tooltip.el);
-
-    tableBody.innerHTML = data.map(function (d) {
-      var rate = d.total ? Math.round(100 * d.reported / d.total) : 0;
-      return "<tr><td>" + d.year + "</td><td>" + fmt(d.reported) + "</td><td>" +
-        fmt(d.missing) + "</td><td>" + rate + "%</td></tr>";
-    }).join("");
-
-    var c = compliance(selected);
-    statEl.innerHTML = "<strong>" + (c.total ? Math.round(100 * c.reported / c.total) : 0) +
-      "%</strong> of covered buildings reported in " + selected + " (" +
-      fmt(c.reported) + " of " + fmt(c.total) + ")";
-  }
-
-  // Horizontal stacked bars: reported vs. did not report, per floor-area range.
-  var sizeChartEl = document.getElementById("size-chart");
-  var sizeTooltip = makeTooltip(sizeChartEl);
-
-  function renderSizeChart(year) {
-    var data = complianceBySize(year);
-    var rowH = 22, rowGap = 10, labelW = 128, rateW = 40;
-    var W = 400, H = data.length * (rowH + rowGap) - rowGap + 4;
-    var pw = W - labelW - rateW, GAP = 2;
-    var max = Math.max.apply(null, data.map(function (d) { return d.total; }));
-    var x = function (v) { return (v / max) * pw; };
-
-    var old = sizeChartEl.querySelector("svg");
-    if (old) old.remove();
-    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, "aria-hidden": "true" });
-
-    data.forEach(function (d, i) {
-      var y = i * (rowH + rowGap) + 2, cy = y + rowH / 2 + 4;
-      var rate = Math.round(100 * d.reported / d.total);
       var g = el("g", { "class": "size-row" });
       g.appendChild(el("rect", { x: 0, y: y - rowGap / 2, width: W, height: rowH + rowGap, fill: "transparent" }));
-      g.appendChild(el("text", { x: 0, y: cy, "font-size": 12, fill: "var(--text-secondary)" }, d.label));
+      g.appendChild(el("text", { x: 0, y: cy, "font-size": 12,
+        fill: d.overall ? "var(--text-primary)" : "var(--text-secondary)",
+        "font-weight": d.overall ? 600 : 400 }, d.label));
 
-      var x0 = labelW, wRep = x(d.reported), wMis = x(d.missing);
+      var x0 = labelW;
+      var wRep = c.total ? (d.reported / c.total) * pw : 0;
+      var wMis = c.total ? (d.missing / c.total) * pw : 0;
       if (d.reported) {
         g.appendChild(el("rect", { "class": "bar", x: x0, y: y, width: wRep, height: rowH, fill: "var(--reported)" }));
         if (wRep > 26) {
@@ -393,46 +329,62 @@
              "H" + xm + "Z" }));
       }
       g.appendChild(el("text", { x: W, y: cy, "text-anchor": "end", "font-size": 11,
-        fill: "var(--text-primary)" }, rate + "%"));
+        fill: "var(--text-primary)", "font-weight": d.overall ? 600 : 400 }, rate + "%"));
 
       g.addEventListener("mousemove", function (e) {
-        sizeTooltip.show(e, "<strong>" + d.label + "</strong> · " + rate + "% reported<br>" +
+        tooltip.show(e, "<strong>" + d.label + "</strong> · " + rate + "% reported<br>" +
           fmt(d.reported) + ' <span class="muted">reported</span> · ' +
           fmt(d.missing) + ' <span class="muted">did not</span>');
       });
-      g.addEventListener("mouseleave", sizeTooltip.hide);
+      g.addEventListener("mouseleave", tooltip.hide);
       svg.appendChild(g);
+
+      if (d.overall) {
+        var ly = y + rowH + rowGap / 2 + sectionGap / 2;
+        svg.appendChild(el("line", { x1: 0, x2: W, y1: ly, y2: ly, stroke: "var(--border)", "stroke-width": 1 }));
+      }
     });
 
-    sizeChartEl.insertBefore(svg, sizeTooltip.el);
+    chartEl.insertBefore(svg, tooltip.el);
 
-    document.querySelector("#size-table tbody").innerHTML = data.map(function (d) {
-      return "<tr><td>" + d.label + "</td><td>" + fmt(d.reported) + "</td><td>" + fmt(d.missing) +
-        "</td><td>" + Math.round(100 * d.reported / d.total) + "%</td></tr>";
+    tableBody.innerHTML = data.map(function (d) {
+      var cell = d.overall ? "th" : "td";
+      return "<tr><" + cell + ">" + d.label + "</" + cell + "><td>" + fmt(d.reported) + "</td><td>" +
+        fmt(d.missing) + "</td><td>" + (d.total ? Math.round(100 * d.reported / d.total) : 0) + "%</td></tr>";
     }).join("");
 
-    document.getElementById("size-chart-hint").textContent = year + ". Floor area is self-reported; " +
-      "when a building left it blank, its value from another year is used. " +
-      "\u201cSize unknown\u201d buildings have never reported a floor area.";
+    statEl.innerHTML = "<strong>" + (c.total ? Math.round(100 * c.reported / c.total) : 0) +
+      "%</strong> of covered buildings reported in " + year + " (" +
+      fmt(c.reported) + " of " + fmt(c.total) + ")";
+
+    document.getElementById("size-chart-hint").textContent = "Floor area is the Cook County " +
+      "Assessor's building area; buildings without one (mostly tax-exempt) use their self-reported " +
+      "floor area. \u201cSize unknown\u201d buildings have neither.";
   }
 
   // ---------- filters ----------
 
-  // Each filter <select> has data-col (the CSV column) and option values of
+  // Each filter <select> has data-col (a CSV column), or data-size for floor
+  // area (the same Assessor-first sizing as the size chart). Option values are
   // "min-max" (max may be blank, upper bound exclusive), "none" (value missing),
-  // or "" (no filter). Non-reporting buildings never match an active filter.
+  // or "" (no filter). Buildings that didn't report have no emissions data,
+  // so they never match that filter; they can match the floor-area filter.
   function activeFilters() {
     return filterSelects.filter(function (s) { return s.value; }).map(function (s) {
-      if (s.value === "none") return { col: s.dataset.col, none: true };
+      var f = { col: s.dataset.col, size: !!s.dataset.size };
+      if (s.value === "none") { f.none = true; return f; }
       var parts = s.value.split("-");
-      return { col: s.dataset.col, min: num(parts[0]) || 0, max: num(parts[1]) };
+      f.min = num(parts[0]) || 0;
+      f.max = num(parts[1]);
+      return f;
     });
   }
 
-  function matches(row, filters) {
-    if (filters.length && !isReported(row)) return false;
+  function matches(row, filters, year) {
+    var needsReport = filters.some(function (f) { return !f.size; });
+    if (needsReport && !isReported(row)) return false;
     return filters.every(function (f) {
-      var v = num(row[f.col]);
+      var v = f.size ? floorArea(row, year) : num(row[f.col]);
       if (f.none) return v === null;
       return v !== null && v >= f.min && (f.max === null || v < f.max);
     });
@@ -440,10 +392,12 @@
 
   function updateMap() {
     var year = select.value, filters = activeFilters();
-    var rows = (rowsByYear[year] || []).filter(function (r) { return matches(r, filters); });
+    var rows = (rowsByYear[year] || []).filter(function (r) { return matches(r, filters, year); });
     var geojson = toGeoJSON(rows);
     if (map.getSource("buildings")) map.getSource("buildings").setData(geojson);
     filterHint.hidden = !filters.length;
+    document.getElementById("filter-hint-text").hidden =
+      !filters.some(function (f) { return !f.size; });
     var unmapped = rows.length - geojson.features.length;
     statusEl.textContent = "Showing " + fmt(geojson.features.length) + " buildings" +
       (filters.length ? " matching the filters" : "") + "." +
@@ -453,7 +407,6 @@
   function setYear(year) {
     select.value = year;
     renderChart(year);
-    renderSizeChart(year);
     updateMap();
   }
 
@@ -466,6 +419,6 @@
 
   var mapReady = new Promise(function (resolve) { map.on("load", function () { addLayers(); resolve(); }); });
   var dataReady = loadAll();
-  dataReady.then(function () { indexFloorArea(); renderChart(select.value); renderSizeChart(select.value); });
+  dataReady.then(function () { indexFloorArea(); renderChart(select.value); });
   Promise.all([mapReady, dataReady]).then(function () { setYear(select.value); });
 })();

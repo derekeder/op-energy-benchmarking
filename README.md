@@ -38,5 +38,7 @@ If you change the `Gemfile`, rebuild the image with `docker compose build`.
 - `assessor_under_10k`: covered on the site, but the Assessor size is under 10,000 ft² (often a building matched to only part of its parcels).
 - `excluded_assessor_small`, `no_assessor_size`: for completeness; tax-exempt property (schools, churches, Village facilities) has no Assessor size.
 
+The script also writes `data/unlisted_buildings.geojson`: every `not_on_list` and `not_on_list_adjacent` building. The site adds these as covered buildings that never reported. Some (those with a `likely_match` or an adjacent listed building) may duplicate a listed building matched to the wrong parcel; fixing the match in `data/address_corrections.csv` removes them on the next run.
+
 Run it after `match_parcels.py`. The report and Assessor downloads aren't published with the site.
 

@@ -7,6 +7,10 @@
 // from a year's export gets a placeholder row (identity fields copied from its
 // nearest listed year, everything else blank), which counts as not reported.
 //
+// Buildings the Cook County Assessor sizes at 10,000 ft² or more that aren't in
+// any export (data/unlisted_buildings.geojson, from scripts/assessor_review.py)
+// are added to every year as well; they never reported.
+//
 // Buildings whose self-reported floor area is under 10,000 ft² in every year
 // they reported are treated as not covered and dropped from all years, except
 // those in ALWAYS_COVERED.
@@ -74,7 +78,7 @@ window.OPData = (function () {
     });
   }
 
-  function buildYears(raw, years) {
+  function buildYears(raw, years, unlisted) {
     var byId = {};   // id -> { year: row }
     var maxGfa = {}; // id -> largest self-reported floor area
     years.forEach(function (y) {
@@ -94,7 +98,15 @@ window.OPData = (function () {
 
     var rowsByYear = {};
     years.forEach(function (y) {
-      rowsByYear[y] = covered.map(function (id) {
+      var extra = unlisted.map(function (f) {
+        var row = { _listed: false, _unlisted: true, _geometry: f.geometry,
+                    _assessor_sf: f.properties.assessor_sf, _assessor_desc: f.properties.description };
+        IDENTITY.forEach(function (c) { row[c] = ""; });
+        row[COL.id] = f.properties.id;
+        row[COL.address] = f.properties.address;
+        return row;
+      });
+      rowsByYear[y] = extra.concat(covered.map(function (id) {
         if (byId[id][y]) return byId[id][y];
         // Placeholder from the nearest listed year (ties go to the later year).
         var src = Object.keys(byId[id]).sort(function (a, b) {
@@ -103,7 +115,7 @@ window.OPData = (function () {
         var row = { _listed: false };
         IDENTITY.forEach(function (c) { row[c] = byId[id][src][c] || ""; });
         return row;
-      });
+      }));
     });
     return rowsByYear;
   }
@@ -113,16 +125,69 @@ window.OPData = (function () {
   // Resolves to { year: [rows] } with every covered building in every year.
   function loadYears(baseurl, years) {
     if (!cache) {
+      var unlisted = fetch(baseurl + "/data/unlisted_buildings.geojson")
+        .then(function (r) { return r.ok ? r.json() : { features: [] }; })
+        .then(function (d) { return d.features || []; })
+        .catch(function () { return []; });
       cache = Promise.all(years.map(function (y) {
         return parseCSV(baseurl + "/data/op-benchmarking-" + y + ".csv");
-      })).then(function (lists) {
+      }).concat([unlisted, parseCSV(baseurl + "/data/assessor_sizes.csv")])).then(function (lists) {
         var raw = {};
         years.forEach(function (y, i) { raw[y] = lists[i]; });
-        return buildYears(raw, years);
+        var rowsByYear = buildYears(raw, years, lists[years.length]);
+        // Assessor building area for listed buildings, by Feature ID.
+        var sizes = {};
+        lists[years.length + 1].forEach(function (r) {
+          var sf = num(r.assessor_sf);
+          if (sf !== null) sizes[r.feature_id] = sf;
+        });
+        years.forEach(function (y) {
+          rowsByYear[y].forEach(function (row) {
+            if (!row._assessor_sf && sizes[row[COL.id]]) row._assessor_sf = sizes[row[COL.id]];
+          });
+        });
+        return rowsByYear;
       });
     }
     return cache;
   }
 
-  return { COL: COL, MIN_GFA: MIN_GFA, num: num, isReported: isReported, parseCSV: parseCSV, loadYears: loadYears };
+  // Year buttons (_includes/year-buttons.html) with a <select>-like interface:
+  // .value (get/set) and addEventListener("change", fn). Arrow keys move
+  // between years, as in a radio group.
+  function yearPicker(id) {
+    var root = document.getElementById(id);
+    var buttons = Array.prototype.slice.call(root.querySelectorAll("button[data-year]"));
+    var listeners = [];
+    function current() {
+      return buttons.filter(function (b) { return b.getAttribute("aria-checked") === "true"; })[0] || buttons[buttons.length - 1];
+    }
+    function set(year, fire) {
+      var changed = current().dataset.year !== String(year);
+      buttons.forEach(function (b) {
+        var on = b.dataset.year === String(year);
+        b.setAttribute("aria-checked", on ? "true" : "false");
+        b.tabIndex = on ? 0 : -1;
+      });
+      if (fire && changed) listeners.forEach(function (fn) { fn(); });
+    }
+    buttons.forEach(function (b, i) {
+      b.addEventListener("click", function () { set(b.dataset.year, true); });
+      b.addEventListener("keydown", function (e) {
+        var step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+        if (!step) return;
+        e.preventDefault();
+        var next = buttons[(i + step + buttons.length) % buttons.length];
+        set(next.dataset.year, true);
+        next.focus();
+      });
+    });
+    return {
+      get value() { return current().dataset.year; },
+      set value(y) { set(y, false); },
+      addEventListener: function (type, fn) { if (type === "change") listeners.push(fn); }
+    };
+  }
+
+  return { yearPicker: yearPicker, COL: COL, MIN_GFA: MIN_GFA, num: num, isReported: isReported, parseCSV: parseCSV, loadYears: loadYears };
 })();
