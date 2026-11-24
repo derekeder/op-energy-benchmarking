@@ -1,0 +1,21 @@
+title: Oak Park Energy Benchmarking
+description: Map of Oak Park, IL building energy benchmarking data, 2022–2025.
+baseurl: ""
+url: ""
+
+benchmarking_years: [2022, 2023, 2024, 2025]
+
+exclude:
+  - README.md
+  - LICENSE
+  - Dockerfile
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .DS_Store
+  - scripts
+  - data/ccgisdata_-_Parcel_*.geojson
+  - data/parcel_addresses.csv
+  - data/assessor
+  - reports

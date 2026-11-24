@@ -1,0 +1,118 @@
+---
+layout: default
+maplibre: true
+scripts:
+  - /assets/js/data.js
+  - /assets/js/map.js
+---
+<div class="app">
+  <aside class="sidebar">
+    <h1>{{ site.title }}</h1>
+    <nav class="nav"><span aria-current="page">Map</span> · <a href="{{ '/buildings/' | relative_url }}">Building list</a></nav>
+    <p class="lede">
+      Oak Park requires owners of larger buildings to report their annual energy and water use
+      through ENERGY STAR Portfolio Manager. This map shows each covered building and what it reported.
+    </p>
+
+    <label class="field">
+      <span>Reporting year</span>
+      <select id="year-select">
+        {% for y in site.benchmarking_years reversed %}
+        <option value="{{ y }}">{{ y }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <section class="panel filters">
+      <h2>Filters</h2>
+      <label class="field">
+        <span>Floor area (self-reported)</span>
+        <select class="filter" data-col="Property GFA - Self-Reported (ft²)">
+          <option value="">All sizes</option>
+          <option value="10000-25000">10,000–24,999 ft²</option>
+          <option value="25000-50000">25,000–49,999 ft²</option>
+          <option value="50000-100000">50,000–99,999 ft²</option>
+          <option value="100000-">100,000 ft² and up</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Greenhouse gas emissions</span>
+        <select class="filter" data-col="Total GHG Emissions (Metric Tons CO2e)">
+          <option value="">All emissions</option>
+          <option value="0-50">Under 50 t CO2e</option>
+          <option value="50-100">50–99 t CO2e</option>
+          <option value="100-250">100–249 t CO2e</option>
+          <option value="250-500">250–499 t CO2e</option>
+          <option value="500-">500 t CO2e and up</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>ENERGY STAR score</span>
+        <select class="filter" data-col="ENERGY STAR Score">
+          <option value="">All scores</option>
+          <option value="75-">75–100</option>
+          <option value="50-75">50–74</option>
+          <option value="25-50">25–49</option>
+          <option value="0-25">1–24</option>
+          <option value="none">No score</option>
+        </select>
+      </label>
+      <p class="hint" id="filter-hint" hidden>
+        Buildings that didn't report are hidden while a filter is set.
+        <button type="button" id="clear-filters">Clear filters</button>
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Compliance</h2>
+      <p class="stat" id="compliance-stat">&nbsp;</p>
+      <div class="legend">
+        <span class="key"><i class="swatch swatch-reported"></i>Reported</span>
+        <span class="key"><i class="swatch swatch-missing"></i>Did not report</span>
+      </div>
+      <div class="chart" id="compliance-chart" role="img" aria-label="Covered buildings that reported, by year"></div>
+      <details class="table-view">
+        <summary>Show table</summary>
+        <table id="compliance-table">
+          <thead><tr><th>Year</th><th>Reported</th><th>Did not report</th><th>Rate</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </details>
+    </section>
+
+    <section class="panel">
+      <h2>Compliance by floor area</h2>
+      <p class="hint" id="size-chart-hint"></p>
+      <div class="chart" id="size-chart" role="img" aria-label="Share of covered buildings that reported, by floor area"></div>
+      <details class="table-view">
+        <summary>Show table</summary>
+        <table id="size-table">
+          <thead><tr><th>Floor area</th><th>Reported</th><th>Did not report</th><th>Rate</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </details>
+    </section>
+
+    <footer class="sources">
+      <a href="https://www.oak-park.us/Community/Sustainability-Resilience/Sustainability-Initiatives-Policies/Building-Benchmarking">Village benchmarking policy</a>
+      ·
+      <a href="https://oakpark-il.beam-portal.org/map/15/properties/">Data source (BEAM)</a>
+    </footer>
+  </aside>
+  <div class="map-wrap">
+    <div id="map"></div>
+    <div class="map-key" aria-label="Map legend">
+      <h2>Greenhouse gas emissions</h2>
+      <p class="hint">Total, metric tons CO2e per year</p>
+      <ul class="map-legend">
+        <li><i class="dot" style="background:#0d366b"></i>500 and up</li>
+        <li><i class="dot" style="background:#1c5cab"></i>250–499</li>
+        <li><i class="dot" style="background:#2a78d6"></i>100–249</li>
+        <li><i class="dot" style="background:#5598e7"></i>50–99</li>
+        <li><i class="dot" style="background:#9ec5f4"></i>Under 50</li>
+        <li><i class="dot dot-hollow"></i>Did not report</li>
+      </ul>
+      <p class="hint" id="map-status"></p>
+    </div>
+  </div>
+</div>

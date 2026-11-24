@@ -1,0 +1,402 @@
+Oak Park Feature ID,Property Name,Address Line 1,Property Notes,Owner,Number of residential units,Water Use Intensity (All Water Sources) (gal/ft²),Multifamily Housing - Total Number of Residential Living Units,Electricity - Weather Normalized Site Electricity Intensity (Grid and Onsite Renewables) (kWh/ft²),Property GFA - Self-Reported (ft²),Primary Property Type - Self Selected,Total GHG Emissions (Metric Tons CO2e),ENERGY STAR Certification - Year(s) Certified,CPL Property Address,Indoor Water Use (All Water Sources) (kgal),Natural Gas - Weather Normalized Site Natural Gas Intensity (therms/ft²),ENERGY STAR Certification - Last Approval Date,Indoor Water Use Intensity (All Water Sources) (gal/ft²),% Difference from National Median Site EUI,Water Score (Multifamily Only),Property Data Administrator,Weather Normalized Site EUI (kBtu/ft²),ENERGY STAR Score,Water Use (All Water Sources) (kgal)
+"261721","Greenplan Taylor LLC","408-416 N. Taylor Ave.",,"GREENPLAN TAYLOR LLC",,"36.49","25.00","3.8","27156.0","Multifamily Housing",,,"412 N TAYLOR AVE","991.0",,,"36.49",,"42","Tracy Leone",,,"991.0"
+"2622196",,"421 S OAK PARK OAK PARK",,"417 OP LLC",,,,,,,,,"417 S OAK PARK AVE",,,,,,,,,,
+"268350","Greenplan Elmwood LLC","421 S. Elmwood Ave.",,"GREENPLAN ELMWOOD LLC",,"32.22","26.00","4.8","14742.0","Multifamily Housing","87.70",,"421 S ELMWOOD AVE","475.0","0.7",,"32.22","1.8","91","Tracy Leone","87.6",,"475.0"
+"264587",,"326 S AUSTIN OAK PARK",,"GREENPLAN 326 AUSTIN",,,,,,,,,"326 S AUSTIN BLVD",,,,,,,,,,
+"269356",,"419 SOUTH OAK PARK",,"SWELL, INC",,,,,,,,,"417 SOUTH BLVD",,,,,,,,,,
+"2621890","James Edward Place","327-331 Harrison/ 901-905 S Cuyler",,"A & S AMUNATEGUI",,"81.10",,"0.5","7381.0","Mixed Use Property","60.5",,"901 S CUYLER AVE","598.6",,,"81.10","81.9",,"Tim Davis",,,"598.6"
+"2621156",,"419 S EUCLID OAK PARK",,"WEST SUBURBAN MGMT",,,,,,,,,"419 S EUCLID AVE",,,,,,,,,,
+"2622173",,"408 S OAK PARK AVE",,"OAK PARK ARMS DONOVAN",,,,,,,,,"408 S OAK PARK AVE",,,,,,,,,,
+"267657",,"41 GARFIELD OAK PARK",,"NOMADIC HOLDINGS LLC",,,,,,,,,"39 GARFIELD ST",,,,,,,,,,
+"269265","400 Scoville","400-12 S. Scoville",,"M&M Property Management",,"48.55","26.00","1.5","14225.0","Multifamily Housing","116.2",,"400 S SCOVILLE AVE","690.6","1.5",,"48.55","10.1","72","Tim Davis","155.1","35","690.6"
+"2622319",,"400 WASHINGTON BLVD",,"SOCIETY ST PIUS X",,,,,,,,,"400 WASHINGTON BLVD",,,,,,,,,,
+"265067","Greenplan Properties XIII LLC","425-431 N. Humphrey Ave.",,"GREENPLAN PROP XIII",,"22.81","28.00","3.1","29465.0","Multifamily Housing",,,"429 N HUMPHREY AVE","672.0",,,"22.81",,"70","Tracy Leone",,,"672.0"
+"261039",,"34 N AUSTIN BLVD",,"CATHOLIC BISHOP CHGO",,,,,,,,,"34 N AUSTIN BLVD",,,,,,,,,,
+"261611",,"426 S TAYLOR OAK PARK",,"FIRST AMERICAN BANK AS",,,,,,,,,"426 S TAYLOR AVE",,,,,,,,,,
+"2613188","Elmwood & Garfield","429-435 Garfield Ave &amp; 939 S. Elmwood Ave",,"SAIBREAS INC",,"34.58","15.00","2.5","15596.0","Multifamily Housing","88.35",,"941 S ELMWOOD AVE","539.3","0.9",,"34.58","-4.0",,"Saibreas Saibreas","96.2",,"539.3"
+"261021","Harvey Sr.","411-415 S. Harvey",,"OAK PARK RES CORP",,"0.08","19.00","4.4","12380.0","Multifamily Housing","92.4",,"415 S HARVEY AVE",,,,,"27.0",,"Derek Darter",,,"1.0"
+"2621825",,"45 HARRISON OAK PARK",,"ZDRAVKO SEGO",,,,,,,,,"37 HARRISON ST",,,,,,,,,,
+"268393",,"538 S SCOVILLE AVE",,"GICEL MERCADO",,,,,,,,,"542 S SCOVILLE AVE",,,,,,,,,,
+"263513","Greenplan 432 Austin LLC","432-+438 N. Austin Blvd.",,"GREENPLAN 432 AUSTIN",,"40.33","26.00","3.2","19512.0","Multifamily Housing",,,"436 N AUSTIN BLVD","787.0",,,"40.33",,"70","Tracy Leone",,,"787.0"
+"2622338","Oak Park School District 97 Warehouse","541 Madison St.",,"SCHOOL DIST # 97",,,,"3.0","12500.0","K-12 School","73.85",,"541 MADISON ST",,"0.9",,,"-38.8",,"Janet King","97.4","87",
+"264318","Iowa","41-47 Iowa/ 543-45 N. Humphrey",,"OAK PARK RES CORP",,"0.04","15.00","5.3","13266.0","Multifamily Housing","64.0",,"545 N HUMPHREY AVE",,,,,"-16.7",,"Derek Darter",,,"0.5"
+"2610079",,"508 N CUYLER OAK PARK",,"MARIE B GIBSON",,,,,,,,,"508 N CUYLER AVE",,,,,,,,,,
+"268565","St. Christopher's Episcopal Church","545 S. East Ave",,"ST CHRISTOPHERS EPIS",,"1.71",,"2.5","11300.0","Worship Facility","44.60",,"545 S EAST AVE","19.3","0.5",,"1.71","11.5",,"Martin Dunlavey","61.9","43","19.3"
+"264596",,"508 S AUSTIN BLVD",,"OAK PARK VILLAGE",,,,,,,,,"504 S AUSTIN BLVD",,,,,,,,,,
+"261381128",,"435 MADISON ST.",,"STEPHEN J MUDJER",,,,,,,,,"435 MADISON ST",,,,,,,,,,
+"2617881",,"513 S MAPLE AVE",,"RUSH OAK PARK HOSPITAL",,,,,,,,,"513 S MAPLE AVE",,,,,,,,,,
+"2622087","432-436 S. Maple","436 S. Maple",,"MERIDIAN MAPLE LLC",,"89.99","16.00","4.7","12900.0","Multifamily Housing","115.1",,"436 S MAPLE AVE","1160.8","1.3",,"89.99","51.6",,"Brian Overheidt","141.5",,"1160.8"
+"268347","0288AS - Oak Park, IL","438 Madison St",,"ALBERTSONS",,"52.70",,"55.3","24477.0","Supermarket/Grocery Store","820.32",,"438 MADISON ST","1290.0","1.6",,"52.70","8.7",,"Keith Klug","346.3","41","1290.0"
+"262525","Humphrey-Washington Oak Park","38 Washington Blvd",,"Timothy Kelly",,"39.47","18.00","2.7","23217.0","Multifamily Housing","154.92",,"38 WASHINGTON BLVD","916.3","1.0",,"39.47","12.9",,"Breea Buildings","110.8",,"916.3"
+"2622238",,"703 Madison",,"AH OAK PARK A DELAWARE",,,,,,,,,"703 MADISON ST",,,,,,,,,,
+"261910","First United Church of Oak Park","848 Lake St.",,"1ST UNITED CH OAK PARK",,"6.29",,"4.5","44671.0","Worship Facility","254.61",,"848 LAKE ST","281.0","0.7",,"6.29","39.3",,"Heather Vanderberg","86.5","29","281.0"
+"2618310","Greenplan Ontario LLC","922 ONTARIO OAK PARK",,,,"35.11","13.00",,"11052.0","Multifamily Housing",,,"924 ONTARIO ST","388.0",,,"35.11",,,"Tracy Leone",,,"388.0"
+"2617921","1035 Washington","1035-1045 Washington Blvd/402 Wisconsin Ave",,"CHICAGO TITLE LAND TRU",,"59.77","22.00","0.4","17305.0","Multifamily Housing","473.3",,"1035 WASHINGTON BLVD","1034.3","5.5",,"59.77","305.8","42","Tim Davis","554.2","1","1034.3"
+"2622041",,"1104 CHICAGO OAK PARK",,"P SKIOURIS 1100 W CHGO",,,,,,,,,"1104 CHICAGO AVE",,,,,,,,,,
+"2621826",,"1106 MADISON ST",,"FELLOWSHIP CHRISTIAN C",,,,,,,,,"1106 MADISON ST",,,,,,,,,,
+"26910169",,"1133 SOUTH OAK PK",,,,,,,,,,,"1133 SOUTH BLVD",,,,,,,,,,
+"266167","930","930 N. Austin Blvd",,"J PETRAITIS & L STEVEN",,"0.05","18.00","7.3","10449.0","Multifamily Housing","92.7",,"930 N AUSTIN BLVD",,,,,"52.0",,"Shannon Nebiolo",,,"0.5"
+"2612984","Clarence and Harrison II, LLC","628-634 Harrison/839-847 S Clarence",,,,"47.49","26.00","0.3","21590.0","Multifamily Housing","152.1",,"628 HARRISON ST","1025.3","1.4",,"47.49","18.1","41","Tim Davis","137.7","29","1025.3"
+"261897",,"6525 NORTH AVE",,"OAK PARK PROPERTIES",,,,,,,,,"6525 NORTH AVE",,,,,,,,,,
+"261431",,"120 S AUSTIN OAK PARK",,"ADAMS AUSTIN BUILDING",,,,,,,,,"120 S AUSTIN BLVD",,,,,,,,,,
+"2618208","Thrive Counseling Center","120 S. Marion Street",,"THRIVE COUNSELING CTR",,"12.30",,,"14880.0","Medical Office","29.4",,"120 S MARION ST","183.0",,,"12.30","-78.2",,"Kandy Shapiro",,"100","183.0"
+"2614891","209 Oak Park","209 S. Oak Park Ave.",,"M&M Property Management",,"81.81","30.00","1.0","19320.0","Multifamily Housing","119.2",,"209 S OAK PARK AVE","1580.6","1.1",,"81.81","-14.1","25","Tim Davis","118.2","71","1580.6"
+"265383","Greenplan SOAK LLC","1412-1414 N. Austin Blvd.",,"PRFB PROPERTIES",,"90.40","16.00","9.9","10000.0","Multifamily Housing",,,"1414 N AUSTIN BLVD","904.0",,,"90.40",,,"Tracy Leone",,,"904.0"
+"266659","Greenplan 1350 Austin LLC","1348-1352 N. Austin Blvd./7-9 Greenfield St.",,"GREENPLAN 1350 AUSTIN",,"29.79","16.00","4.2","15207.0","Multifamily Housing",,,"1352 N AUSTIN BLVD","453.0",,,"29.79",,,"Tracy Leone",,,"453.0"
+"2615331",,"175 N KENILWORTH OAK PARK",,"SIERRA REALTY & MGMT",,,,,,,,,"175 N KENILWORTH AVE",,,,,,,,,,
+"2613286","Harrison and Highland","301-11 Harrison/ 901-09 S. Highland",,"VLG OAK PK RESID",,"0.02","22.00","4.3","13398.0","Multifamily Housing","95.6",,"303 HARRISON ST",,,,,"1.5","100","Shannon Nebiolo",,"47","0.3"
+"264598",,"514 S AUSTIN OAK PARK",,"OAK PARK RES CORP",,,,,,,,,"514 S AUSTIN BLVD",,,,,,,,,,
+"2621092","Whittier Elementary","715 N. Harvey",,"SCHOOL DIST # 97",,,,"5.7","98625.0","K-12 School","610.67",,"715 N HARVEY AVE",,"0.7",,,"-10.7",,"Janet King","88.5","60",
+"261411",,"44 MADISON OAK PARK",,"KYUN SE SEOK",,,,,,,,,"44 MADISON ST",,,,,,,,,,
+"2622439",,"1023 SOUTH BLVD",,"LORO VENTURE & KEA TAX",,,,,,,,,"1023 SOUTH BLVD",,,,,,,,,,
+"2621071",,"1025 COLUMBIAN AVE",,"CATHOLIC BISHOP CHGO",,,,,,,,,"1025 COLUMBIAN AVE",,,,,,,,,,
+"2615170","921 Lake Street","921-923 Lake Street",,,,"45.39","21.00","1.0","16125.0","Multifamily Housing","94.7",,"921 LAKE ST","732.0","1.1",,"45.39","-1.3",,"Tim Davis","113.9",,"732.0"
+"2615231",,"855 LAKE OAK PARK",,"ICON CLARK LLC",,,,,,,,,"855 LAKE ST",,,,,,,,,,
+"2618235",,"935 SOUTH OAK PARK",,"ROBERT P LISKA II",,,,,,,,,"935 SOUTH BLVD",,,,,,,,,,
+"2618008",,"939 WASHINGTON BLVD",,"DAVID G STROM",42,,,,,,,,"935 WASHINGTON BLVD",,,,,,,,,,
+"2614720",,"710 WASHINGTON OAK PARK",,"EROL FERATOVIC",,,,,,,,,"710 WASHINGTON BLVD",,,,,,,,,,
+"2618161",,"946 NORTH BLVD",,"HEPHZIBAH CHILDRENS",,,,,,,,,"946 NORTH BLVD",,,,,,,,,,
+"26915861",,"6033 NORTH OAK PARK",,"MIA PROPERTY ACQUIS",,,,,,,,,"6031 NORTH AVE",,,,,,,,,,
+"269320",,"605 LAKE OAK PARK",,"S CLEMENS & J TENUTA",,,,,,,,,"605 LAKE ST",,,,,,,,,,
+"2622347",,"6315 NORTH OAK PARK",,"DF WEST NORTH LLC",,,,,,,,,"6315 NORTH AVE",,,,,,,,,,
+"265099","Greenplan 710-712 Austin LLC","710-712 N. Austin Blvd.",,"GREENPLAN 710 712 AUST",,"35.20","16.00",,"13038.0","Multifamily Housing",,,"14 SUPERIOR ST","459.0","1.1",,"35.20",,,"Tracy Leone",,,"459.0"
+"2615067",,"610 S MAPLE AVE",,"HTA RUSH LLC",,,,,,,,,"610 S MAPLE AVE",,,,,,,,,,
+"2615443",,"714 LAKE OAK PARK",,"ILLINOIS BELL PROP TAX",,,,,,,,,"714 LAKE ST",,,,,,,,,,
+"264404",,"6101 NORTH OAK PARK",,"GREGORY M HAJDUK",,,,,,,,,"6101 NORTH AVE",,,,,,,,,,
+"262700",,"634 N AUSTIN BLVD",,"AUSTIN BLVD CHRSTN CH",,,,,,,,,"634 N AUSTIN BLVD",,,,,,,,,,
+"251018977",,"715 S BLVD OAK PARK",,"LULLO PROPERTIES LLC",,,,,,,,,"717 SOUTH BLVD",,,,,,,,,,
+"261904",,"716 ONTARIO OAK PARK",,"WALTER DRECHSLER",,,,,,,,,"716 ONTARIO ST",,,,,,,,,,
+"267094",,"6126 ROOSEVELT OAK PARK",,"HENK REAL ESTATE LLC",,,,,,,,,"1191 S TAYLOR AVE",,,,,,,,,,
+"2622350",,"6405 NORTH AVE",,"DF WEST NORTH LLC",,,,,,,,,"6405 NORTH AVE",,,,,,,,,,
+"2622349",,"6407 NORTH OAK PARK",,"DF WEST NORTH LLC",,,,,,,,,"6415 NORTH AVE",,,,,,,,,,
+"2617685",,"641 S OAK PARK AVE",,"PARKVIEW PRESB CH USA",,,,,,,,,"641 S OAK PARK AVE",,,,,,,,,,
+"268431","Dimensions Management","500 W Madison",,"FENWICK HIGH SCHOOL",,"41.35","11.00","3.0","9528.0","Multifamily Housing","78.61",,"500 MADISON ST",,,,,"39.5",,"LE Benchmarking",,,"394.0"
+"266355","C6149NOR (22148)","6149 NORTH AVE",".","EASTASIA HOLDINGS 1 L",,"42.93","17.00","6.0","14082.0","Multifamily Housing","129.2",,"6151 NORTH AVE","604.5","1.2",,"42.93","56.3",,"David Lopez","142.1",,"604.5"
+"2621948","Greenplan Harrison LLC","638-642 Harrison St.",,"GREENPLAN HARRISON LLC",,"26.63","20.00","3.6","16638.0","Multifamily Housing",,,"638 HARRISON ST","443.0",,,"26.63",,"87","Tracy Leone",,,"443.0"
+"2621875","Greenplan Properties XXIII LLC","618-632 S. Austin Blvd.",,"GREENPLAN PROP XXIII",,"63.71","50.00","8.9","15240.0","Multifamily Housing",,,"618 S AUSTIN BLVD","971.0",,,"63.71",,"77","Tracy Leone",,,"971.0"
+"2622353",,"6429 NORTH OAK PARK",,"ROSSELL AN ILLINOIS LI",,,,,,,,,"6429 NORTH AVE",,,,,,,,,,
+"2615422",,"721 Ontario St.",,,,,,,,,,,"721 ONTARIO ST",,,,,,,,,,
+"2620129","3236AS - Oak Park, IL","7036 Roosevelt Rd",,"ALBERTSONS",,"46.42",,"52.6","26820.0","Supermarket/Grocery Store","650.85",,"7036 ROOSEVELT RD","1245.0","0.0",,"46.42","-22.5",,"Keith Klug","179.9","73","1245.0"
+"265096",,"722 N AUSTIN OAK PARK",,"MIKE QUAID",,,,,,,,,"720 N AUSTIN BLVD",,,,,,,,,,
+"2621701",,"6208 ROOSEVELT RD",,"ASSOCIATED BLDG PRTNSP",,,,,,,,,"6208 ROOSEVELT RD",,,,,,,,,,
+"2614079",,"705 JACKSON BLVD",,"VINEYARD CHRSTN FLLSHP",,,,,,,,,"705 JACKSON BLVD",,,,,,,,,,
+"268564","Wesley Madison Group, LLC","645-649 Madison/ 504-510 Wesley",,"WESLEY&MADISON GRP LLC",,"64.07",,"0.3","10904.0","Mixed Use Property","11.3",,"645 MADISON ST","698.6",,,"64.07","-76.9",,"Tim Davis",,,"698.6"
+"262941",,"6235 NORTH AVE",,"NEW LIFE CHRISTIAN FLL",,,,,,,,,"6235 NORTH AVE",,,,,,,,,,
+"262942",,"6249 NORTH OAK PARK",,"CHARLES STERN",,,,,,,,,"6249 NORTH AVE",,,,,,,,,,
+"2621879","GP Carpenter LLC","730-734 Carpenter Ave.",,"GP CARPENTER LLC",,"12.48","12.00","5.1","10020.0","Multifamily Housing",,,"730 CARPENTER AVE","125.0",,,"12.48",,,"Tracy Leone",,,"125.0"
+"2621877","Greenplan 814 Austin LLC","814-820 S. Austin Blvd.",,"GREENPLAN 814 LLC",,"37.54","25.00","3.3","22560.0","Multifamily Housing",,,"814 S AUSTIN BLVD","847.0",,,"37.54",,"57","Tracy Leone",,,"847.0"
+"2617088",,"6748 ROOSEVELT RD",,"CVS STORE 02844 01",,,,,,,,,"6748 ROOSEVELT RD",,,,,,,,,,
+"2620016","Clinton Property, LLC","901-911 S. Clinton",,"M&M PROPERTY MANAGEMEN",,"46.51","24.00","0.5","16875.0","Multifamily Housing","116.1",,"901 CLINTON AVE","784.9","1.3",,"46.51","4.0","57","Tim Davis","131.3","44","784.9"
+"2615332",,"901 ONTARIO OAK PARK",,"SIERRA REALTY & MGMT",,,,,,,,,"901 ONTARIO ST",,,,,,,,,,
+"2613766",,"741 CLARENCE OAK PARK",,"741 CLARENCE LLC",,,,,,,,,"741 CLARENCE AVE",,,,,,,,,,
+"2616454","6819-6821 North Avenue","6819-6821 North Avenue",,"F PELLEGRINI",,"16.61",,"12.9","11500.0","Office","121.52",,"6821 NORTH AVE","191.0",,,"16.61","43.3",,"Daniel Carleton",,"23","191.0"
+"2615047",,"6900 ROOSEVELT OAK PARK",,"1191 975 KENILWORTH LL",,,,,,,,,"6900 ROOSEVELT RD",,,,,,,,,,
+"2619587",,"6909 NORTH OAK PARK",,"RJ SCHMIDLING PROP",,,,,,,,,"6909 NORTH AVE",,,,,,,,,,
+"2619681",,"6931 NORTH OAK PARK",,"R & R PROPERTIES GROUP",,,,,,,,,"6931 NORTH AVE",,,,,,,,,,
+"2610423",,"744 FAIR OAKS AVE",,"FAIROAKS PRESB CHURCH",,,,,,,,,"744 FAIR OAKS AVE",,,,,,,,,,
+"2621876","822 S. Austin LLC","822-832 S. Austin Blvd",,,,"0.09","43.00","3.2","36084.0","Multifamily Housing","213.58",,"822 S AUSTIN BLVD","3.4",,,"0.09","1.1","100","Natasa Taseva",,"48","3.4"
+"2619683",,"6953 NORTH OAK PARK",,"JACK STRAND",,,,,,,,,"6955 NORTH AVE",,,,,,,,,,
+"2622404",,"824 S OAK PARK AVE",,"STEVE OR JAMES VLAHOS",,,,,,,,,"824 S OAK PARK AVE",,,,,,,,,,
+"261203088",,"829 LAKE ST",,"US BANK FACILITY MGMT",,,,,,,,,"835 LAKE ST",,,,,,,,,,
+"263019",,"801 S EAST AVE",,"CATHOLIC BISHOP CHGO",,,,,,,,,"801 S EAST AVE",,,,,,,,,,
+"2619084",,"701 BELLEFORTE AVE",,"LIVING SANCTUARY CHURC",,,,,,,,,"701 BELLEFORTE AVE",,,,,,,,,,
+"263038",,"808 S EAST AVE",,"CATHOLIC BISHOP CHGO",,,,,,,,,"808 S EAST AVE",,,,,,,,,,
+"2622401",,"840 S OAK PARK OAK PARK",,"FIFTH THIRD BANK FAC",,,,,,,,,"840 S OAK PARK AVE",,,,,,,,,,
+"2615184",,"875 LAKE ST",,"ICON CLARK",,,,,,,,,"875 LAKE ST",,,,,,,,,,
+"2621633",,"841 S OAK PARK OAK PARK",,,,,,,,,,,"829 S OAK PARK AVE",,,,,,,,,,
+"267400",,"844 S HUMPHREY OAK PARK",,"WESTWARD 360 MANAGEMENT",,,,,,,,,"846 S HUMPHREY AVE",,,,,,,,,,
+"2615178","Greenplan 914 NB LLC","914 North Blvd.",,"GREENPLAN 914 NB LLC",,,"31.00",,"16283.0","Multifamily Housing",,,"914 NORTH BLVD",,,,,,,"Tracy Leone",,,
+"2622000",,"914 MADISON ST",,"NATL SHOPPING PLAZAS",,,,,,,,,"914 MADISON ST",,,,,,,,,,
+"265236","1022","1022-1024 N. Austin Blvd",,"OAK PARK RESIDENCE COR",,"0.04","13.00","4.5","10290.0","Multifamily Housing","68.3",,"1022 N AUSTIN BLVD",,,,,"13.2",,"Shannon Nebiolo",,,"0.5"
+"2618165",,"1001 LAKE ST",,"DAVID KING & ASSOCIATES, INC.",,,,,,,,,"1001 LAKE ST",,,,,,,,,,
+"2622076",,"100 FOREST AVE",,"RYAN LLC",,,,,,,,,"100 FOREST AVE",,,,,,,,,,
+"2615186",,"110 N KENILWORTH OAK PARK",,"KENILWORTH TOWERS",,,,,,,,,"110 N KENILWORTH AVE",,,,,,,,,,
+"26585812",,"106 N MAPLE AVE",,"DECARION TRUST",,,,,,,,,"106 N MAPLE AVE",,,,,,,,,,
+"2618210",,"1031 SOUTH OAK PARK",,"SACHEM BUILDING LLC",,,,,,,,,"1033 SOUTH BLVD",,,,,,,,,,
+"2617451","1019 S. Oak Park Ave.","1019-23 S. Oak Park Ave.",,"MARTIN MILKOVIC & MARI",,"39.50","26.00","2.5","17112.0","Multifamily Housing","99.18",,"1019 S OAK PARK AVE","676.0","0.9",,"39.50","-12.7","71","Matt Milkovich","97.2","69","676.0"
+"2621677",,"100 S OAK PARK OAK PARK",,"106 PARTNERS LLC",,,,,,,,,"104 S OAK PARK AVE",,,,,,,,,,
+"2621389","North Pump Station","1010 N. Ridgeland",,"SCHOOL DIST # 97",,,,"154.7","1800.0","Drinking Water Treatment & Distribution","126.93",,"1000 N RIDGELAND AVE",,"0.7",,,"-15.2",,"Vic Sabaliauskas","528.0","65",
+"267225","1000 Austin","1000-1006 S. Austin Blvd.",,"C/O M & M Property Management",,"148.81","26.00","1.7","6451.0","Multifamily Housing","110.0",,"1000 S AUSTIN BLVD","960.0","3.2",,"148.81","186.2",,"Tim Davis","322.9",,"960.0"
+"2618139",,"1020 RANDOLPH ST",,"OAK PARK VILLAGE",,,,,,,,,"1020 RANDOLPH ST",,,,,,,,,,
+"2618121",,"1020 WASHINGTON BLVD",,"YMCA OF OAK PARK",,,,,,,,,"1020 WASHINGTON BLVD",,,,,,,,,,
+"261417","OAK PARK, Site #43808","11 MADISON ST # 4409","300-0043808","US BANK TAX DEPT",,,,"17.6","36109.0","Financial Office","348.89",,"11 MADISON ST",,"0.3",,,"-2.4",,"US Bank CRE","90.7","51",
+"263315",,"117 SOUTH OAK PARK",,"GREENPLAN 117SOUTH LLC",,,,,,,,,"113 SOUTH BLVD",,,,,,,,,,
+"2621861",,"125 N MARION OAK PARK",,"WILLIAM C MCNAMARA",,,,,,,,,"125 N MARION ST",,,,,,,,,,
+"2622194","1168 S. Oak Park Ave.","1168-74 S. Oak Park Ave.",,"GREENPLAN PROP XXV",,"42.43","26.00","2.1","22482.0","Multifamily Housing","105.71",,"1164 S OAK PARK AVE","954.0","0.7",,"42.43","-18.7","38","Matt Milkovich","77.6","78","954.0"
+"2621990",,"125 S KENILWORTH OAK PARK",,"FRIEDA FREUDMAN",,,,,,,,,"125 S KENILWORTH AVE",,,,,,,,,,
+"2612208",,"1039 S EAST AVE",,"WEST SUB MONTESSORI SC",,,,,,,,,"1039 S EAST AVE",,,,,,,,,,
+"2621843",,"110 N MARION ST",,"R P FOX AND ASSOC",,,,,,,,,"106 N MARION ST",,,,,,,,,,
+"2622160","GLA 1000 North LLC","1000-1008 North Blvd",,"MILLENIA HOLDINGS LLC",,"242.92",,,"4941.0","Mixed Use Property","96.6",,"1018 NORTH BLVD","1200.3","3.7",,"242.92","334.0",,"Tim Davis",,,"1200.3"
+"2618124","Greenplan 1026 Washington LLC","1026-1028 Washington Blvd.",,"GREENPLAN 1026 WASHING",,"25.79","19.00","5.2","13650.0","Multifamily Housing","66.70",,"1026 WASHINGTON BLVD","352.0","0.5",,"25.79","-15.8",,"Tracy Leone","64.0",,"352.0"
+"267470","Harrison and Lyman","101-05 Harrison/ 905-11 S. Lyman",,"OAK PARK RESD CORP",,"0.03","16.00","4.0","12591.0","Multifamily Housing","92.9",,"101 HARRISON ST",,,,,"25.4",,"Derek Darter",,,"0.4"
+"2617277","1028 S. Oak Park Ave","1028-32 S. Oak Park Ave.",,"THE MARTIN & MARIJA MI",,"49.60","17.00","4.0","14394.0","Multifamily Housing","85.29",,"1028 S OAK PARK AVE","714.0","0.8",,"49.60","1.1",,"Matt Milkovich","91.6",,"714.0"
+"2622104","Centunum LLC","101 N. Marion Street",,"LAVERNE COLLINS",,"19.64",,"2.3","12452.0","Mixed Use Property","66.1",,"101 N MARION ST","244.5",,,"19.64","19.0",,"Tim Davis",,,"244.5"
+"2618641",,"1101 W Chicago",,"1101 CHICAGO AVE LLC",,,,,,,,,"1101 CHICAGO AVE",,,,,,,,,,
+"2615324",,"103 S GROVE AVE",,"ECONOMY SHOP",,,,,,,,,"103 S GROVE AVE",,,,,,,,,,
+"2615032",,"1045 S KENILWORTH AVE",,"HEATH R NIELSEN",,,,,,,,,"1037 S KENILWORTH AVE",,,,,,,,,,
+"267611","C0111GAR (22138)","111 GARFIELD ST",".","PP FIN CHICAGO 17 LLC",,,"12.00","7.0","11397.0","Multifamily Housing","66.1",,"111 GARFIELD ST",,"0.2",,,"0.2",,"David Lopez","44.6",,
+"2618321",,"1111 ONTARIO ST",,"HCP AM ILLINOIS LLC",178,,,,,,,,"1111 ONTARIO ST",,,,,,,,,,
+"267247","1118","1118-1126 S. Austin Blvd",,"OAK PARK RESIDENCE",,"0.12","31.00","5.4","17983.0","Multifamily Housing","138.8",,"1126 S AUSTIN BLVD",,,,,"5.1","100","Shannon Nebiolo",,"42","2.2"
+"26528274",,"1129 LAKE ST",,"TARGET STORE T-3270",,,,,,,,,"1129 LAKE ST",,,,,,,,,,
+"2621764",,"12 LAKE ST",,"PCC COMMUNITY WELLNESS",,,,,,,,,"14 LAKE ST",,,,,,,,,,
+"2620607",,"1116 GARFIELD ST",,,,,,,,,,,"1116 GARFIELD ST",,,,,,,,,,
+"261395",,"120 MADISON ST",,"SPIRITUAL ASSEMBLY OF THE BAHA'IS OF OAK",,,,,,,,,"120 MADISON ST",,,,,,,,,,
+"2621756",,"1132 LAKE OAK PARK",,"1140 LAKE STREET LLC",,,,,,,,,"1140 LAKE ST",,,,,,,,,,
+"2618233","Kenton House, LLC","112-114 Home Ave.",,"THE KENTON HOUSE LLC",,"127.85","20.00","3.1","5070.0","Multifamily Housing","8.0",,"112 HOME AVE","648.2","0.0",,"127.85","-86.9","23","Tim Davis","13.8","100","648.2"
+"2619330",,"1135 N HARLEM AVE",,"ALDO",,,,,,,,,"1145 N HARLEM AVE",,,,,,,,,,
+"2618183","1136 Pleasant","1136 Pleasant",,"ROSEMARY TRIVELLI",,"52.83","24.00","0.3","20000.0","Multifamily Housing","4.16",,"1136 PLEASANT ST","1056.7","0.0",,"52.83","-96.5","35","Rosemary Trivelli","2.3","100","1056.7"
+"2619787",,"1227 N MARION ST",,"ECP LP",,,,,,,,,"1227 N MARION ST",,,,,,,,,,
+"265362",,"1121 N HUMPHREY AVE",,"ST GREGORIOS MALANKARA",,,,,,,,,"1121 N HUMPHREY AVE",,,,,,,,,,
+"2617063","Greenplan Oak Park LLC","1151-1153 S. Oak Park Ave./803-809 Fillmore St.",,"GREENPLAN OAK PARK LLC",,"31.27","19.00","3.0","14520.0","Multifamily Housing",,,"803 FILLMORE ST","454.0",,,"31.27",,,"Tracy Leone",,,"454.0"
+"2621873","Greenplan 1228 Austin LLC","1228-1230 N. Austin Blvd.",,"GREENPLAN 1228 AUSTIN",,"26.33","13.00","2.9","11316.0","Multifamily Housing",,,"1228 N AUSTIN BLVD","298.0",,,"26.33",,,"Tracy Leone",,,"298.0"
+"2617965",,"1139 RANDOLPH ST",,"OAK PARK DAY NURSERY",,,,,,,,,"1139 RANDOLPH ST",,,,,,,,,,
+"2622281","Village Hall","123 Madison Street",,"OAK PARK VILLAGE",,"4.03",,"34.5","75000.0","Police Station","1255.22",,"123 MADISON ST",,"0.2",,,"179.8",,"Oak Park Village","136.4",,"302.0"
+"2622195","Greenplan Properties XXV LLC","1158-1164 1/2 S. Oak Park Ave.",,"GREENPLAN PROPRTS XXV",,"34.34","26.00","3.4","22482.0","Multifamily Housing","161.27",,"1158 S OAK PARK AVE","772.0","1.1",,"34.34","21.7","57","Tracy Leone","119.8",,"772.0"
+"269575","Cornerstone Oak Park","171 N Cuyler",,"CORNERSTONE UM CHURCH",,"8.86",,"2.7","16363.0","Worship Facility","115.4",,"171 N CUYLER AVE","145.0","1.1",,"8.86","58.1",,"Joshua Grile","123.4","22","145.0"
+"2621883","Greenplan Properties VI LLC","501 N. Lombard Ave.",,"GREENPLAN PROP GPVI",,,"10.00","5.9","5000.0","Multifamily Housing","13.96",,"501 N LOMBARD AVE",,,,,"-50.5",,"Tracy Leone","20.0",,
+"26911392",,"141 S EUCLID AVE",,"ILLINOIS BELL PROP TAX",,,,,,,,,"708 LAKE ST",,,,,,,,,,
+"26349",,"1252 N AUSTIN BLVD",,"JUDSON BAPTIST CHURCH",,,,,,,,,"1252 N AUSTIN BLVD",,,,,,,,,,
+"2615371","Greenplan 201 Grove LLC","201-209 N. Grove Ave.",,"W MCSHEEHY",,"22.69","19.00","1.8","17463.0","Multifamily Housing","91.61",,"201 N GROVE AVE","396.3","0.8",,"22.69","-11.4",,"Wendy Luttrell","89.7",,"396.3"
+"263421",,"127 S HARVEY OAK PARK",,"ENOCH SILVERSTEIN",,,,,,,,,"127 S HARVEY AVE",,,,,,,,,,
+"263365",,"201 S LOMBARD OAK PARK",,"DANIEL VOLLMAN",,,,,,,,,"209 S LOMBARD AVE",,,,,,,,,,
+"2621822",,"13 HARRISON ST",,"OAK PARK RES CORP",,,,,,,,,"13 HARRISON ST",,,,,,,,,,
+"263225",,"21 SOUTH BLVD",,"HSING AUTH VIL OAK PK",,,,,,,,,"21 SOUTH BLVD",,,,,,,,,,
+"2621882",,"210 CHICAGO AVE",,"NEW MOMS INC.",,,,,,,,,"210 CHICAGO AVE",,,,,,,,,,
+"2621644",,"201 South Blvd",,"OAK PARK VILLAGE",,,,,,,,,"201 SOUTH BLVD",,,,,,,,,,
+"2614700",,"200 S OAK PARK AVE",,"CATHOLIC BISHOP CHGO",,,,,,,,,"200 S OAK PARK AVE",,,,,,,,,,
+"267444",,"137 HARRISON OAK PARK",,"JAMES & HATTIE FOSTER",,,,,,,,,"137 HARRISON ST",,,,,,,,,,
+"2615379","The Write Inn","211 N. Oak Park Ave",,"THE WRITE INN",,,,,"33462.0","Hotel","0.0",,"211 N OAK PARK AVE",,,,,,,"Jennifer Gonzalez",,,
+"263195",,"201 LAKE ST",,"PACIFIC MANAGEMENT INC",200,,,,,,,,"201 LAKE ST",,,,,,,,,,
+"2614699",,"212 S OAK PARK OAK PARK",,"JOSEPH RUGGIRELLO",,,,,,,,,"212 S OAK PARK AVE",,,,,,,,,,
+"2617951",,"300 S MAPLE OAK PARK",,"HENRY GURALNICK",,,,,,,,,"300 S MAPLE AVE",,,,,,,,,,
+"269307",,"301 LAKE ST",,"THE RACQUE CLUB OP RF",,,,,,,,,"301 LAKE ST",,,,,,,,,,
+"2615383",,"301 S OAK PARK AVE",,"GREENPLAN 301 LLC",,,,,,,,,"301 N OAK PARK AVE",,,,,,,,,,
+"269187",,"301 S RIDGELAND AVE",,"ALL SOULS CHURCH",,,,,,,,,"301 S RIDGELAND AVE",,,,,,,,,,
+"263812",,"217 CHICAGO AVE",,"OAK PARK VILLAGE",,,,,,,,,"227 CHICAGO AVE",,,,,,,,,,
+"2622312",,"217 HARRISON ST",,"221 HARRISON LLC",,,,,,,,,"217 HARRISON ST",,,,,,,,,,
+"263171",,"230 WASHINGTON OAK PARK",,"MIGUEL ESCOBEDO",,,,,,,,,"228 WASHINGTON BLVD",,,,,,,,,,
+"2618335",,"178 FOREST OAK PARK",,"19TH CENTURY CHARITABL",,,,,,,,,"178 FOREST AVE",,,,,,,,,,
+"26417362",,"150 FOREST OAK PARK",,"19TH CENTURY CLUB",,,,,,,,,"950 LAKE ST",,,,,,,,,,
+"261394","Madison and Lombard","438-42 S. Lombard/ 128-32 Madison",,"OAK PARK RESO CORP",,"0.01","12.00","13.8","12117.0","Multifamily Housing","188.1",,"126 MADISON ST",,,,,"166.6",,"Shannon Nebiolo",,,"0.1"
+"2622166",,"185 S OAK PARK OAK PARK",,"GREENPLAN SOAK LLC",,,,,,,,,"171 S OAK PARK AVE",,,,,,,,,,
+"2615268",,"188 S OAK PARK AVE",,"CATHOLIC BISHOP CHGO",,,,,,,,,"188 S OAK PARK AVE",,,,,,,,,,
+"2619692","1515 North Harlem Avenue","1515 North Harlem Avenue",,"FACILITIES SERVICES Ltd.",,"10.42",,"9.2","60264.0","Medical Office","395.36",,"1515 N HARLEM AVE","628.0",,,"10.42","-36.1",,"Daniel Carleton",,"91","628.0"
+"266178","Greenplan North Austin, LLC","1530-1532 N. Austin Blvd.",,"GREENPLAN NORTH AUSTIN",,"42.23","16.00","3.7","13497.0","Multifamily Housing",,,"1530 N AUSTIN BLVD","570.0",,,"42.23",,,"Tracy Leone",,,"570.0"
+"262504",,"2 WASHINGTON BLVD",,"CHICAGO TITLE LAND TRU",,,,,,,,,"2 WASHINGTON BLVD",,,,,,,,,,
+"2622018",,"134 N MARION ST",,"OXFORD BANK & TRUST",4,,,,,,,,"138 N MARION ST",,,,,,,,,,
+"262475",,"200 N AUSTIN BLVD",,"R K MANAGEMENT",,,,,,,,,"208 N AUSTIN BLVD",,,,,,,,,,
+"2621832","230-238 South Maple Avenue","230-238 South Maple Avenue",,"FOX PARTNERS LP",,"56.39","38.00","3.6","31000.0","Multifamily Housing","52.10",,"230 S MAPLE AVE","1748.0",,,"56.39","-70.4","21","Daniel Carleton","12.2","100","1748.0"
+"269562",,"310 LAKE OAK PARK",,"LICKTON FAMILY BUILD",,,,,,,,,"310 LAKE ST",,,,,,,,,,
+"2622634",,"3 ERIE CT",,"MACNEAL HOSPITAL",,,,,,,,,"1 ERIE CT",,,,,,,,,,
+"2621886","300 Madison","300-12 Madison",,"300 MADISON INVESTORS",,,"24.00",,"25000.0","Multifamily Housing",,,"300 MADISON ST",,,,,,,"Tim Davis",,,
+"2622023","Greenplan Properties XI LLC","504-508 S. Cuyler/315-321 Madison St.",,"GREENPLAN PROP GPXI",,"39.29","28.00","2.9","23518.0","Multifamily Housing",,,"321 MADISON ST","924.0",,,"39.29",,"48","Tracy Leone",,,"924.0"
+"2613284","Lucile Rose Gardens, LLC (CE)","319-325 Harrison/900-904 Cuyler",,"GERI MCLAUCHLAN",,"84.53","18.00","0.8","5075.0","Multifamily Housing","69.0",,"319 HARRISON ST","429.0","2.6",,"84.53","127.8",,"Tim Davis","260.1",,"429.0"
+"2614655","403 S Kenilworth","403 S Kenilworth",,"KASS MANAGEMENT",,,"22.00",,"25900.0","Multifamily Housing","0.00",,"403 S KENILWORTH AVE",,,,,,,"LE Benchmarking",,,
+"269284","Julian Middle","416 S. Ridgeland Avenue",,"SCHOOL DIST # 97",,,,"9.9","175700.0","K-12 School","1171.07",,"416 S RIDGELAND AVE",,"0.4",,,"10.5",,"Janet King","74.4","40",
+"261833",,"345 MADISON ST",,"CVS STORE 3163 01",,,,,,,,,"345 MADISON ST",,,,,,,,,,
+"2621223",,"405 N EUCLID AVE",,"UNITY CH OF OAK PARK",,,,,,,,,"405 N EUCLID AVE",,,,,,,,,,
+"2615354",,"220 N KENILWORTH OAK PARK",,"LESLEY SALOL",,,,,,,,,"220 N KENILWORTH AVE",,,,,,,,,,
+"2617956","Greenplan 254 Maple LLC","254-256 S. Maple Ave./1116-1126 Randolph St.",,"FELIO MARANI",,,"28.00","3.2","26592.0","Multifamily Housing",,,"254 S MAPLE AVE",,,,,,,"Tracy Leone",,,
+"2621739",,"255 S MARION ST",,"YMCA OF OAK PARK",,,,,,,,,"255 S MARION ST",,,,,,,,,,
+"269306","Pete's Fresh Market","259 Lake Street",,"JD REAL ESTATE INC",,,,"66.8","46428.0","Supermarket/Grocery Store","1936.1",,"259 LAKE ST",,"2.2",,,"19.1",,"Nick Liarikos","444.6","32",
+"2618791","315 Maple","315 N. Maple",,,,"65.40","35.00","0.7","32500.0","Multifamily Housing","128.2",,"315 N MAPLE AVE","2125.4","0.7",,"65.40","-33.7",,"Tim Davis","74.0","95","2125.4"
+"263414","Pleasant Circle South","5 Pleasant/ 232-34 N. Austin",,"OAK PARK RESIDENCE COR",,"0.12","15.00","6.1","11310.0","Multifamily Housing","168.3",,"230 N AUSTIN BLVD",,,,,"151.9",,"Derek Darter",,,"1.3"
+"26529473","Oak Park School District 97","260 Madison St.",,"SCHOOL DIST # 97",,,,"16.6","25000.0","K-12 School","245.12",,"260 MADISON ST",,"0.4",,,"-19.1",,"Janet King","100.0","69",
+"2622047","Greenplan Marion LLC","262-264 S. Marion St./1036-1038 Randolph St.",,"GREEPLAN MARION LLC",,"46.25","14.00","3.2","13599.0","Multifamily Housing",,,"428 S SCOVILLE AVE","629.0",,,"46.25",,,"Tracy Leone",,,"629.0"
+"2622171","ed canedo","317 S oak park ave",,"REYES & AMANDA CANEDO",,"45.51","35.00","5.1","16500.0","Multifamily Housing","122.10",,"317 S OAK PARK AVE","750.9","1.0",,"45.51","-14.8","92","Tiffany Canedo","114.4","72","750.9"
+"2610057",,"318 CHICAGO OAK PARK",,"OAK LEYDEN DEV SERVICE",,,,,,,,,"320 CHICAGO AVE",,,,,,,,,,
+"2615378",,"222 N GROVE AVE",,,,,,,,,,,"222 N GROVE AVE",,,,,,,,,,
+"2620605",,"1145 GARFIELD ST",,"H J MOHR & SONS",,,,,,,,,"1137 GARFIELD ST",,,,,,,,,,
+"2615069",,"500 S MAPLE AVE",,"RUSH OAK PARK HOSPITAL",,,,,,,,,"500 S MAPLE AVE",,,,,,,,,,
+"2621395",,"526 WISCOSNIN AVE",,"RUSH OAK PARK HOSPITAL",,,,,,,,,"520 S MAPLE AVE",,,,,,,,,,
+"2622045","Belmont Village Oak Park","1035 Madison Street",,"1051 MADISON ST LLC",,"7.16",,"17.4","101450.0","Senior Living Community","913.93",,"1033 MADISON ST","726.4","0.2",,"7.16","11.2",,"Kerrick Brown","78.9","35","726.4"
+"2617945","400 S Maple Ave","400 S Maple Ave",,"KASS MANAGEMENT",49,,"54.00",,"56820.0","Multifamily Housing","0.00",,"400 S MAPLE AVE",,,,,,,"LE Benchmarking",,,
+"2617972","South Mall Court Condo Association","1138-1150 Washington Blvd/343 S Maple",,,,"29.37","24.00","0.4","25000.0","Multifamily Housing","138.4",,"343 S MAPLE AVE","734.2","1.0",,"29.37","-14.8","89","Tim Davis","106.1","72","734.2"
+"2617940","1116 Washington, LLC","1116 Washington BLVD",,"PMG 1116 WASH LLC",,"30.58","55.00",,"32405.0","Multifamily Housing",,,"1116 WASHINGTON BLVD","991.0",,,"30.58",,"76","Tim Davis",,,"991.0"
+"2617941",,"336-344 S Maple / 1118-1130 Washingotn Blvd",,,,,,,,,,,"1118 WASHINGTON BLVD",,,,,,,,,,
+"2618120",,"1029 WASHINGTON BLVD",,,,,,,,,,,"1019 WASHINGTON BLVD",,,,,,,,,,
+"2618186",,"220 S MAPLE AVE",,,,,,,,,,,"1123 PLEASANT ST",,,,,,,,,,
+"2618138","OPRC III LLC","1024-1030 Randolph Street",,"OPRC 111 LLC",,"0.03","32.00","3.2","28860.0","Multifamily Housing","162.11",,"1030 RANDOLPH ST",,"0.8",,,"-4.2","100","OPRC LLC","90.1","56","0.8"
+"2618204",,"213 S MARION ST",,"203 SOUTH MARION CORP",,,,,,,,,"203 S MARION AVE",,,,,,,,,,
+"2618194",,"122 S MAPLE AVE",,"FOX PARTNERS LP",,,,,,,,,"122 S MAPLE AVE",,,,,,,,,,
+"2618176",,"417 N HARLEM OAK PARK",,"SDOP CORP MIDAMERICA",,,,,,,,,"409 N HARLEM AVE",,,,,,,,,,
+"2618212",,"121 HOME AVE",,"KUSHNER MGMT",38,,,,,,,,"1000 PLEASANT ST",,,,,,,,,,
+"2622437",,"1029 SOUTH BLVD",,"ROBERT LORO CO KEA TAX",,,,,,,,,"1029 SOUTH BLVD",,,,,,,,,,
+"2618187",,"425 N HARLEM AVE",,"SDOP CORP MIDAMERICA",,,,,,,,,"425 N HARLEM AVE",,,,,,,,,,
+"2621758",,"1126 LAKE ST",,"SHAKER & ASSOCIATES",,,,,,,,,"1114 LAKE ST",,,,,,,,,,
+"2621753",,"1125 ONTARIO ST",,"OAK PARK VILLAGE",,,,,,,,,"1123 HOLLEY CT",,,,,,,,,,
+"2618323","Holley Court Condo Association","1103-1113 Holley Court/159-169 N Marion St",,"1ST CHURCH CHRIST SCIE",,"75.01","52.00","2.0","20000.0","Multifamily Housing","235.0",,"159 N MARION ST","1500.3",,,"75.01","12.1","82","Tim Davis",,"32","1500.3"
+"2621759",,"473 N HARLEM AVE",,"OAK PARK VILLAGE",,,,,,,,,"473 N HARLEM AVE",,,,,,,,,,
+"2622317",,"1042 LAKE ST",,"Malnati Organization",,,,,,,,,"1048 LAKE ST",,,,,,,,,,
+"2622452",,"1022 LAKE ST",,"WILLIS G JOHNSON",,,,,,,,,"1020 LAKE ST",,,,,,,,,,
+"2618331",,"1016 LAKE ST",,"OP OFFICE PARTNERS LLC",,,,,,,,,"1010 LAKE ST",,,,,,,,,,
+"26587012",,"149 FOREST AVE",,"ALBION RESIDENTIAL",265,,,,,,,,"1000 LAKE ST",,,,,,,,,,
+"2618662",,"625 N HARLEM AVE",,"HARLEM REAL ESTATE LLC",,,,,,,,,"625 N HARLEM AVE",,,,,,,,,,
+"2618506","OPRC IV LLC 1040","1040 Chicago Ave",,"OPRC IV LLC",,"0.02","18.00","2.6","29154.0","Multifamily Housing","82.76",,"1040 CHICAGO AVE",,"0.3",,,"-51.3",,"OPRC LLC","40.4",,"0.6"
+"2612167","005235-Oak Park, IL","6412 Roosevelt Rd",,"6412 ROOSEVELT ROAD PA",,"36.33",,"16.0","13855.0","Retail Store","129.64",,"6412 ROOSEVELT RD","251.7","0.4",,"18.16","1.8",,"Shrini Bharani","93.2","48","503.3"
+"267362",,"6226 ROOSEVELT RD",,"6226 WEST ROOSEVELT RO",,,,,,,,,"6226 ROOSEVELT RD",,,,,,,,,,
+"2616932","Lincoln Elementary","1111 S. Grove",,"OAK PARK PARK DISTRICT",,,,"6.5","108100.0","K-12 School","675.58",,"1111 S GROVE AVE",,"0.6",,,"-7.4",,"Janet King","85.6","57",
+"2612459","Irving Elementary","1125 S Cuyler",,"SCHOOL DIST # 97",,,,"8.1","81614.0","K-12 School","686.26",,"1125 S CUYLER AVE",,"0.9",,,"15.1",,"Janet King","118.2","36",
+"2622586",,"955 GARFIELD ST",,"JUDETTE RIORDAN",9,,,,,,,,"943 GARFIELD ST",,,,,,,,,,
+"2617401","Grove Garfield Building","837 Garfield",,"CARL ROCCONI",,"42.32","18.00","0.9","15500.0","Multifamily Housing","6.52",,"901 S GROVE AVE",,"1.0",,,"-92.5",,"Carl Rocconi","3.1",,"656.0"
+"2617262","Lexington Oak Park, LLC","944 - 964 S. Oak Park Avenue / 746 Lexington",,"OAK PARK VILLAGE",52,"50.31",,"0.4","36430.0","Mixed Use Property","248.2",,"964 S OAK PARK AVE","1832.9","1.3",,"50.31","51.1",,"Tim Davis","133.1",,"1832.9"
+"2617477","900-910SOakParkAve","900-910 S Oak Park Ave","1st floor is commercial, 2nd floor is residential apartments Default values deselected as of 12 Nov 2024. Actual values are unknown for offices since each office has their own hours and we do not control or monitor the number of computers or staff present on the property.","TRAX REALTY LTD",6,"55.72","7.00","8.3","18683.0","Mixed Use Property","139.11",,"737 GARFIELD ST","1041.0",,,"55.72","30.4",,"Trax Realty Energy Services","28.1",,"1041.0"
+"2612894","GP Wesley LLC","901-927 Wesley Ave./707-711 Garfield St.",,"GP WESLEY LLC",32,"31.63","32.00",,"33477.0","Multifamily Housing",,,"709 GARFIELD ST","1059.0",,,"31.63",,"75","Tracy Leone",,,"1059.0"
+"2612958",,"927 CLARENCE AVE",,,,,,,,,,,"637 GARFIELD ST",,,,,,,,,,
+"267388","Greenplan II","225 Harrison St.",,"GREENPLAN PROP GPII",,"23.65","8.00","9.2","18825.0","Multifamily Housing","80.86",,"225 HARRISON ST","445.2",,,"23.65","-23.8",,"Tracy Leone","31.4",,"445.2"
+"2621824","Harrison West","27-35 Harrison/ 905-11 S. Humphrey",,"OAK PARK RES CORP",29,"0.05","29.00","3.1","26047.0","Multifamily Housing","150.1",,"27 HARRISON ST",,,,,"-1.1","100","Derek Darter",,"51","1.3"
+"262798",,"811 S EUCLID AVE",,"AVENUE BK TR4214",37,,,,,,,,"801 S EUCLID AVE",,,,,,,,,,
+"263021",,"816 CLARENCE AVE",,"CATHOLIC BISHOP CHGO",,,,,,,,,"601 VAN BUREN ST",,,,,,,,,,
+"264588","Greenplan Van Buren LLC","336-350 S. Austin Blvd./8-12 Van Buren St.",,"GREENPLAN VAN BUREN LL",41,"27.52","41.00","9.4","39135.0","Multifamily Housing",,,"336 S AUSTIN BLVD","1077.0",,,"27.52",,"76","Tracy Leone",,,"1077.0"
+"2613646","Longfellow Elementary","715 S. Highland Ave.",,"SCHOOL DIST # 97",,,,"7.7","108765.0","K-12 School","787.37",,"715 HIGHLAND AVE",,"0.7",,,"7.5",,"Janet King","97.4","42",
+"2614376",,"845 MADISON ST",,"TOWN & COUNTRY",,,,,,,,,"845 MADISON ST",,,,,,,,,,
+"2614508",,"812 MADISON ST",,"MADISON & GROVE",,,,,,,,,"446 S GROVE AVE",,,,,,,,,,
+"2622235",,"745 MADISON ST",,"ROSE BECKER",,,,,,,,,"741 MADISON ST",,,,,,,,,,
+"261832","Greenplan Properties XIV LLC","511-521 S. Cuyler Ave.",,"GREENPLAN PROP XIV",38,"29.62","38.00","3.0","30216.0","Multifamily Housing",,,"511 S CUYLER AVE","895.0",,,"29.62",,"76","Tracy Leone",,,"895.0"
+"2614976","Brooks Middle","325 S. Kenilworth",,"SCHOOL DIST # 97",,,,"10.6","175700.0","K-12 School","1207.36",,"325 S KENILWORTH AVE",,"0.4",,,"14.1",,"Janet King","73.2","36",
+"2614419","GFW Oak Park","843-853 Washington Blvd",,"FRIGGA WEILANDT",49,,,,"46068.0","Multifamily Housing","194.81",,"853 WASHINGTON BLVD",,,,,,,"Frigga Weilandt",,,
+"2614830","832-840 Washington Boulevard","832-840 Washington Boulevard",,"FOX PARTNER LP",37,"50.91","37.00","3.4","35000.0","Multifamily Housing","57.04",,"832 WASHINGTON BLVD","1782.0",,,"50.91","-72.1","32","Daniel Carleton","11.8","100","1782.0"
+"2614721","720 Washington Blvd","720 Washington Blvd",,"ANTON BRISKOVIC",,"14.82","18.00","2.6","25000.0","Multifamily Housing","74.60",,"720 WASHINGTON BLVD","370.4","0.3",,"14.82","-48.8",,"SANDEEP SOOD","42.8",,"370.4"
+"268514",,"426-436 Euclid Ave.",,,,,,,,,,,"426 S EUCLID AVE",,,,,,,,,,
+"2614974",,"627 WASHINGTON BLVD",,,,,,,,,,,"627 WASHINGTON BLVD",,,,,,,,,,
+"269123","458 Washington","458 Washington",,"ROSEMARY TRIVELLI",31,"32.07","30.00","0.3","25000.0","Multifamily Housing","140.0",,"458 WASHINGTON BLVD","801.8","1.1",,"32.07","-9.9","76","Rosemary Trivelli","109.9","65","801.8"
+"269195",,"330 WASHINGTON BLVD",,"WASHINGTON RIDGELAND B",29,,,,,,,,"322 WASHINGTON BLVD",,,,,,,,,,
+"269197","Greenplan 300 Washington LLC","302-312 Washington Blvd./337-345 S. Cuyler Ave.",,"GREENPLAN 300 WASHINGT",48,"20.33","49.00","3.1","38178.0","Multifamily Housing","56.74",,"302 WASHINGTON BLVD","776.0",,,"20.33","-74.4","93","Tracy Leone","10.4","100","776.0"
+"2622322",,"208 MADISON ST",,"OAK PARK PARK DISTRICT",,,,,,,,,"218 MADISON ST",,,,,,,,,,
+"261586","Terra Cotta Condo Association","237-247 W. Washington/403-405 S Harvey",,,,"93.99","51.00","0.5","25000.0","Multifamily Housing","235.9",,"237 WASHINGTON BLVD","2349.8","1.9",,"93.99","4.1","51","Tim Davis","188.7","43","2349.8"
+"2621682",,"219 WASHINGTON BLVD",,"ESCOBEDO MIGUEL",35,,,,,,,,"221 WASHINGTON BLVD",,,,,,,,,,
+"263172","Greenplan Properties XII LLC","357 S HARVEY AVE",,"GREENPLAN PROP XII",49,"29.08","50.00",,"48171.0","Multifamily Housing",,,"238 WASHINGTON BLVD","1401.0",,,"29.08",,"64","Tracy Leone",,,"1401.0"
+"261603","Greenplan Properties XVI LLC","415-425 S. Taylor Ave.",,"GREENPLAN PROP XVI",50,"26.20","51.00","3.2","49275.0","Multifamily Housing",,,"427 S TAYLOR AVE","1291.0",,,"26.20",,"82","Tracy Leone",,,"1291.0"
+"2621681",,"211 WASHINGTON BLVD",,"MIGUEL ESCOBEDO",,,,,,,,,"213 WASHINGTON BLVD",,,,,,,,,,
+"261588","Boulevard Pointe Condominium Association","121-27 Washington &amp; 402-08 Lombard",,"R DAVID MORRIS",,"41.72","25.00","0.6","20000.0","Multifamily Housing","112.8",,"408 S LOMBARD AVE","834.4","1.1",,"41.72","-21.5","82","Tim Davis","111.4","81","834.4"
+"262618",,"130 WASHINGTON BLVD",,"R K MANAGEMENT",32,,,,,,,,"120 WASHINGTON BLVD",,,,,,,,,,
+"261040","16-24","16-24 N. Austin Blvd",,"OAK PARK RESIDENCE COR",31,"0.03","31.00","4.4","23876.0","Multifamily Housing","145.8",,"16 N AUSTIN BLVD",,,,,"-3.1","100","Shannon Nebiolo",,"54","0.7"
+"261038",,"38 N AUSTIN BLVD",,"CATHOLIC BISHOP CHGO",,,,,,,,,"38 N AUSTIN BLVD",,,,,,,,,,
+"262505","Greenplan Properties Washington Street Partners","24-32 Washington Blvd.",,"WASHINGTON ST PARTNERS",38,"24.93","38.00","2.2","40356.0","Multifamily Housing",,,"24 WASHINGTON BLVD","1006.0",,,"24.93",,"74","Tracy Leone",,,"1006.0"
+"2622170","Greenplan Randolph LLC","803-805 Randolph St./305-315 S. Oak Park Ave.",,"GREENPLAN RANDOLPH LLC",49,"17.71","49.00",,"39861.0","Multifamily Housing",,,"305 S OAK PARK AVE","706.0",,,"17.71",,"97","Tracy Leone",,,"706.0"
+"2621920",,"612 RANDOLPH ST",,,,,,,,,,,"241 S EAST AVE",,,,,,,,,,
+"2615154","Pleasant and Kenilworth","901-11 Pleasant/ 201-11 S. Kenilworth",,"OAK PARK RESIDENCE COR",50,"0.07","50.00","5.6","26253.0","Multifamily Housing","198.6",,"201 S KENILWORTH AVE",,,,,"-5.6","100","Derek Darter",,"58","1.9"
+"2621640",,"940 PLEASANT ST",,,,,,,,,,,"942 PLEASANT ST",,,,,,,,,,
+"2622161","Avenue Lake Condo Association","806-812 North Blvd/ 101-107 N Oak Park Ave",,"SMART PROPERTIES LLC",,"14.56",,"0.5","27533.0","Other","19.2",,"101 N OAK PARK AVE","401.0","0.1",,"14.56","-84.2",,"Tim Davis","10.7",,"401.0"
+"264675","433 South Blvd","433 South Blvd",,"LIAO WAYSUN",,"9.36",,"3.1","10750.0","Other","45.02",,"433 SOUTH BLVD","100.6","0.5",,"9.36","-5.4",,"Mary Martin","61.9",,"100.6"
+"2621722",,"329 SOUTH BLVD",,,,,,,,,,,"323 SOUTH BLVD",,,,,,,,,,
+"263355","Greenplan Properties XV LLC","218-228 Pleasant St./134-140 S. Harvey Ave.",,"GREENPLAN PROPXV",31,"34.37","31.00","4.0","26097.0","Multifamily Housing",,,"136 S HARVEY AVE","897.0",,,"34.37",,"70","Tracy Leone",,,"897.0"
+"263427","Greenplan Harvey LLC","100-112 S. Harvey Ave./225-227 South Blvd.",,"GREENPLAN HARVEY LLC",38,"33.40","38.00","3.3","32604.0","Multifamily Housing","207.13",,"223 SOUTH BLVD","1089.0","0.9",,"33.40","7.9","71","Tracy Leone","104.8",,"1089.0"
+"2618163",,"930 NORTH BLVD",,"GOLDMAN INVEST 930 N B",,,,,,,,,"930 NORTH BLVD",,,,,,,,,,
+"2618147",,"949 LAKE ST",,"CALVARY MEM CHURCH OAK",,,,,,,,,"949 LAKE ST",,,,,,,,,,
+"2622451",,"931 LAKE ST",,"CALVARY MEM CHURCH OAK",,,,,,,,,"930 NORTH BLVD",,,,,,,,,,
+"2622620",,"924 LAKE ST",,"GRACE EPISCOPAL CHURCH",,,,,,,,,"920 LAKE ST",,,,,,,,,,
+"2622011","Courtland Condominium Association","813-825 Lake Street",,"US BANK FACILITY MGMT",,"29.16","45.00","0.5","54404.0","Multifamily Housing","223.3",,"813 LAKE ST",,"0.7",,,"-31.2","58","Jenna Buehre","77.2",,"1586.6"
+"2615261",,"100 N OAK PARK AVE",,"OAK PARK VILLAGE",,,,,,,,,"104 N OAK PARK AVE",,,,,,,,,,
+"2615262","The Avenue Garage","720 North Blvd",,"OAK PARK VILLAGE",,"0.01",,"2.4","161868.0","Parking","143.39",,"720 NORTH BLVD",,,,,,,"Oak Park Village","8.1",,"1.6"
+"2622010",,"805 LAKE ST",,"SCOVILLE SQUARE ASSCO",,,,,,,,,"137 N OAK PARK AVE",,,,,,,,,,
+"2622075",,"733 LAKE ST",,"JAMES BUSHOUSE",40,,,,,,,,"136 N OAK PARK AVE",,,,,,,,,,
+"2622316",,"731 LAKE ST",,"J & T BUILDING MGT",,,,,,,,,"715 LAKE ST",,,,,,,,,,
+"2615259","Euclid Commons Condo Association","125 N. Euclid",,"J & T BUILDING MGT",,"46.71",,"3.2","24483.0","Other","92.5",,"711 LAKE ST","1143.6","0.4",,"46.71","-14.4",,"Tim Davis","55.6",,"1143.6"
+"2622052","726-736 Lake Street AKA 144-150 North Oak Park Avenue","726-736 Lake Street AKA 144-150 North Oak Park Avenue",,"RP FOX AND ASSOCIATES",,"60.59",,"27.4","17000.0","Retail Store","217.01",,"722 LAKE ST","1030.0",,,"60.59","85.4",,"Daniel Carleton","93.5","5","1030.0"
+"2621377","Main Fire Station","100 N Euclid Ave",,"OAK PARK VILLAGE",,"9.82",,"13.1","10000.0","Fire Station","83.17",,"100 N EUCLID AVE",,"0.4",,,"37.3",,"Oak Park Village","88.0",,"98.2"
+"269915",,"460 LAKE ST",,"PILGRIM CONG CHURCH",,,,,,,,,"120 N SCOVILLE AVE",,,,,,,,,,
+"269858","Greenplan 418 Lake LLC","418-426 Lake t./126-132 N. Elmwood Ave.",,"ELMLAKE PARTNERS JV",43,"37.29","43.00","3.1","38775.0","Multifamily Housing","58.18",,"130 N ELMWOOD AVE","1446.0",,,"37.29","-73.1","53","Tracy Leone","10.6","100","1446.0"
+"2622008",,"324 LAKE ST",,"LAKETON LLC C O M&M P",10,,,,,,,,"324 LAKE ST",,,,,,,,,,
+"2622004","Greenplan Properties XVII LLC","123-129 N. Humphrey Ave./38-44 Lake St.",,"ZEN LIFE & MEDITATION",35,"53.79","35.00","3.4","36547.0","Multifamily Housing","221.94",,"38 LAKE ST","1966.0","0.9",,"53.79","3.2","11","Tracy Leone","99.0",,"1966.0"
+"263512","Brandon 440 Austin LLC","440-448 N Austin Avenue",,,31,"29.70","31.94","0.3","26616.0","Multifamily Housing","164.0",,"442 N AUSTIN BLVD","790.5","1.2",,"29.70","3.3","78","Tim Davis","120.6","49","790.5"
+"263515",,"152 N HUMPHREY AVE",,"GREENPLAN PROP GPIV",31,,,,,,,,"140 N HUMPHREY AVE",,,,,,,,,,
+"263511","450","450-460 N. Austin Blvd",,"R K MANAGEMENT",43,"0.04","43.00","3.8","32846.0","Multifamily Housing","215.2",,"458 N AUSTIN BLVD",,,,,"6.3","100","Shannon Nebiolo",,"40","1.4"
+"2615374","GP Grove LLC","173-181 N. Grove Ave.",,"GP GROVE LLC",15,"42.45","35.00","3.0","46459.0","Multifamily Housing",,,"169 N GROVE AVE","1972.0",,,"42.45",,"48","Tracy Leone",,,"1972.0"
+"2621608","Avenue Square Condominium Association","811 ERIE ST",,,18,,"0.00",,"0.0","Multifamily Housing",,,"811 ERIE ST",,,,,,,"Tim Davis",,,
+"2615421","Free Church","730 ONTARIO ST",,"FREE CHURCH",,"3.76",,"1.3","12500.0","Worship Facility","72.9",,"200 N OAK PARK AVE","47.0","1.0",,"3.76","68.2",,"Charles Colegrove","107.3","18","47.0"
+"2615420",,"729 ERIE ST",,,,,,,,,,,"228 N OAK PARK AVE",,,,,,,,,,
+"2615414",,"726 ERIE ST",,,,,,,,,,,"300 N OAK PARK AVE",,,,,,,,,,
+"269818","OPRF Garage","137 Scoville Ave",,"SCHOOL DIST #200",,"0.00",,"2.2","90900.0","Parking","44.59",,"201 N SCOVILLE AVE",,,,,,,"Oak Park Village","7.5",,"0.0"
+"269477","Beye Elementary","230 N. Cuyler",,"SCHOOL DIST # 97",,,,"6.0","83881.0","K-12 School","509.48",,"230 N CUYLER AVE",,"0.6",,,"-16.1",,"Janet King","83.9","66",
+"261946","Holmes Elementary","508 N Kenilworth Ave.",,"SCHOOL DIST # 97",,,,"7.2","80971.0","K-12 School","485.07",,"508 N KENILWORTH AVE",,"0.5",,,"-17.7",,"Janet King","75.7","68",
+"261664",,"441 N LOMBARD AVE",,,18,,,,,,,,"437 N LOMBARD AVE",,,,,,,,,,
+"261720","Brandon 400 Taylor LLC","400 N Taylor Avenue",,"BRANDON TAYLOR LLC",25,"37.46","25.00","0.4","23517.0","Multifamily Housing","142.7",,"400 N TAYLOR AVE","880.9","1.2",,"37.46","3.7","52","Tim Davis","121.2","44","880.9"
+"265101",,"8 SUPERIOR ST",,"CPM AUSTIN LLC",31,,,,,,,,"14 SUPERIOR ST",,,,,,,,,,
+"266155","Greenplan Properties IX LLC","902-910 N. Austin Blvd./4-10 Iowa St.",,"GREENPLAN PROP GPIX",43,"26.10","43.00","2.4","41262.0","Multifamily Housing",,,"902 N AUSTIN BLVD","1077.0",,,"26.10",,"75","Tracy Leone",,,"1077.0"
+"266162",,"918 N AUSTIN BLVD",,"COLIN A JENSEN & CLAIR",,,,,,,,,"914 N AUSTIN BLVD",,,,,,,,,,
+"2622612",,"1233 N HARLEM AVE",,"BNAI ABRAHAM ZION CONG",,,,,,,,,"1237 N HARLEM AVE",,,,,,,,,,
+"2619691",,"7123 NORTH AVE",,"EDWARDS REALTY CO",,,,,,,,,"7101 NORTH AVE",,,,,,,,,,
+"2622158",,"6947 NORTH AVE",,"CHIVA NUTH",,,,,,,,,"6945 NORTH AVE",,,,,,,,,,
+"2622157",,"6943 NORTH AVE",,"R & R PROPERTIES GROUP",,,,,,,,,"6945 NORTH AVE",,,,,,,,,,
+"2616165","Mann Elementary","921 N. Kenilworth Ave",,"SCHOOL DIST # 97",,,,"7.0","83616.0","K-12 School","568.63",,"921 N KENILWORTH AVE",,"0.7",,,"-6.1",,"Janet King","93.2","56",
+"266356",,"6209 NORTH AVE",,"DDI HOLDINGS LLC",,,,,,,,,"6209 NORTH AVE",,,,,,,,,,
+"2617837",,"1041 SUSAN COLLINS LN 305",,"HOME FIRST ILL. LLC",,,,,,,,,"1041 SUSAN COLLINS LN",,,,,,,,,,
+"2618775",,"1040 ERIE ST",,,,,,,,,,,"1040 ERIE ST",,,,,,,,,,
+"2619328",,"1205 N HARLEM AVE 9",,"AGING & DISABILITY FND",,,,,,,,,"1205 N HARLEM AVE",,,,,,,,,,
+"2618184","201 Maple Place - Oak Park","201 S Maple Ave",,"HOME FIRST ILL. LLC",,"22.39","45.00","4.2","75660.0","Multifamily Housing","399.3",,"201 S MAPLE AVE","1694.0","0.7",,"22.39","-9.7","52","Breea Buildings","79.8","65","1694.0"
+"2615334",,"203 N KENILWORTH AVE",,,,,,,,,,,"203 N KENILWORTH AVE",,,,,,,,,,
+"2615330","151 N Kenilworth Condominium Association","151 N Kenilworth Ave","There are 6 floors of living units, a basement containing boilers, water storage tanks, pumps, etc., a ground level housing an office, foyer, lobby, and mailroom; and a mezzanine containing a laundry room, and storage rooms for residents' excess belongings.",,,"16.87","59.00","3.6","98533.0","Multifamily Housing","515.1",,"151 N KENILWORTH AVE",,"0.7",,,"-23.7","97","Daniel Cimaglio","83.8","85","1662.0"
+"268858",,"333 S EAST AVE",,,,,,,,,,,"333 S EAST AVE",,,,,,,,,,
+"2617773","Imperial Manor - Oak Park","425 Home Avenue",,,,"36.95","30.00","3.0","46574.0","Multifamily Housing","184.5",,"425 HOME AVE",,,,,"-29.6","28","Breea Buildings",,"93","1721.0"
+"2614788",,"401 S GROVE AVE",,,,,,,,,,,"401 S GROVE AVE",,,,,,,,,,
+"2622321","Prairie Place 6436 - Oak Park","6436 Roosevelt Road",,,,"4.71","54.00","4.5","77672.0","Multifamily Housing","286.0",,"6436 ROOSEVELT RD","366.0","0.3",,"4.71","-34.7","100","Breea Buildings","46.2","96","366.0"
+"2614678",,"800 WASHINGTON BLVD",,,,,,,,,,,"800 WASHINGTON BLVD",,,,,,,,,,
+"2618069",,"950 WASHINGTON BLVD",,,,,,,,,,,"950 WASHINGTON BLVD",,,,,,,,,,
+"2616853",,"430 HOME AVE",,,,,,,,,,,"420 HOME AVE",,,,,,,,,,
+"2622176","817 Oak Park","817-23 S. Oak Park Ave.",,"M&M Property Management",,"215.70",,"0.4","4725.0","Mixed Use Property","166.2",,"825 S OAK PARK AVE","1019.2","6.6",,"215.70","679.0",,"Tim Davis","660.3",,"1019.2"
+"263518","162 Humphrey LLC","162 N Humphrey Ave",,"OAK PK RESID CORP",,"57.02","10.40","0.8","8670.0","Multifamily Housing","47.1",,"162 N HUMPHREY AVE","494.3","1.0",,"57.02","-8.7",,"Tim Davis","104.9",,"494.3"
+"2617733","New Wave Real Estate, LLC","432 Clinton",,"C/O M & M Property Management",,"138.43","12.00","1.2","2595.0","Multifamily Housing","34.9",,"432 CLINTON AVE","359.2","2.6",,"138.43","125.6",,"Tim Davis","259.7",,"359.2"
+"2618125","1032 Washington","1032 Washington",,"M&M PROPERTY MANAGEMENT",,"140.32","11.00","1.2","4375.0","Multifamily Housing","64.5",,"1032 WASHINGTON BLVD","613.9","2.9",,"140.32","147.4",,"Tim Davis","291.4",,"613.9"
+"2621619","255 Maple","255 S. Maple, 1140-44 Randolph, 201-205 S Harlem",,"M&M Property Management",,"41.24","16.00","1.3","10705.0","Multifamily Housing","53.6",,"1144 RANDOLPH ST","441.4",,,"41.24","-15.6",,"Tim Davis",,,"441.4"
+"2614868","The Jordan","814-824 Washington Blvd",,,,"23.83","21.00","0.4","28000.0","Multifamily Housing","111.2",,"824 WASHINGTON BLVD","667.2","0.7",,"23.83","-33.8","90","Tim Davis","74.8","93","667.2"
+"2618788",,"300 N. Maple Ave.",,,,,,,,,,,"300 N MAPLE AVE",,,,,,,,,,
+"268872",,"338 S. East Ave. / 530 Washington Blvd.",,"ANNA SOBIERAJ",,,,,,,,,"524 WASHINGTON BLVD",,,,,,,,,,
+"2615367",,"225-227 N. Grove Ave / 835-845 Erie St.",,,,,,,,,,,"227 N GROVE AVE",,,,,,,,,,
+"2614679",,"801-809 Washington Blvd",,,,,,,,,,,"801 WASHINGTON BLVD",,,,,,,,,,
+"2614420",,"420 S. Kenilworth",,,,,,,,,,,"420 S KENILWORTH AVE",,,,,,,,,,
+"2618162",,"938 North Blvd.",,,,,,,,,,,"938 NORTH BLVD",,,,,,,,,,
+"2618691",,"412 N Marion Street",,,,,,,,,,,"412 N MARION ST",,,,,,,,,,
+"269200","Arbor Place - Oak Park","320-326 S Ridgeland Ave",,"CHRISTOPHER BOYER",,"27.11","13.00","2.9","16521.0","Multifamily Housing","69.9",,"318 S RIDGELAND AVE",,,,,"-27.8",,"Breea Buildings","9.8",,"448.0"
+"268310","Elmwood Manor - Oak Park","414-416 S Elmwood Ave",,,,"70.41","11.00","4.3","12342.0","Multifamily Housing","24.7",,"414 S ELMWOOD AVE",,,,,"-64.6",,"Breea Buildings","14.5",,"869.0"
+"261198","301 W Chicago Ave - Oak Park","301 W Chicago Avenue",,"ROSA ELENA MEJIA",,"20.24","18.00","3.1","20352.0","Multifamily Housing","31.0",,"301 CHICAGO AVE",,,,,"-72.9",,"Breea Buildings","10.6",,"412.0"
+"2615295","Oak Park City Apartments","675 Lake Street","Year built 1987. Heated parking garage below ground. Added parking garage square feet to the total. New cooling tower in Oct 2017? Heat is paid for by the building",,,"43.02","125.00","7.0","105648.0","Multifamily Housing","716.68",,"675 LAKE ST","1368.0","0.7",,"17.54","3.0","59","Matthew Flotta","92.3","45","4544.7"
+"2621864","212 South Marion Street","212 South Marion Street",,"200 S MARION LLC",,"12.89","14.00","4.3","19000.0","Office","89.58",,"216 S MARION ST","245.0","0.3",,"12.89","-37.2",,"Daniel Carleton","14.4","80","245.0"
+"2622462","011760-Oak Park, IL","811 West Madison St.","This building was being remodeled from Jun 2021 to February 2022. We moved in as of March 1, 2022 with full occupancy.","WALGREEN CO 11760",,"34.55","18.00","33.8","11134.0","Retail Store","235.62",,"801 MADISON ST","192.3","1.0",,"17.27","181.0","97","Shrini Bharani","218.6","1","384.7"
+"2622397","830 North Boulevard","830 North Boulevard",,"OAK PARK VILLAGE",,"9.26",,"10.9","22795.0","Office","165.31",,"830 NORTH BLVD","211.0","0.4",,"9.26","28.2",,"Joseph Vajda","81.4",,"211.0"
+"2618130","Bon Villa","320 Wisconsin Ave",,"GLA BON VILLA LLC",93,,"94.00",,"48000.0","Multifamily Housing",,,"320 WISCONSIN AVE",,,,,,,"Jeanne Welsch",,,
+"2614722","Euclid Ave United Methodist Church","405 S. Euclid Ave",,"EUCLID AVE UM CHURCH",,"1.37",,"3.1","23321.0","Worship Facility","32.2",,"405 S EUCLID AVE","32.0","0.0",,"1.37","-58.4",,"Roger Chancellor","11.7","89","32.0"
+"2621752","1136 Ontario Association","1136 Ontario St.",,,,"38.99","13.00","3.7","10055.0","Multifamily Housing","83.3",,"1136 ONTARIO ST","392.0","1.2",,"38.99","40.4",,"Ryan Reid","134.8",,"392.0"
+"2621641","Mills Park Tower","1025 PLEASANT PL",,"OAK PARK PARK DISTRICT",,"0.01","194.00","23.3","95817.0","Multifamily Housing","1065.9",,"1025 PLEASANT PL",,"0.2",,,"32.1","100","Will Burgos","95.2","13","0.7"
+"2621754","Shaker Building","1100 LAKE ST",,"SHAKER & ASSOCIATES",,"11.62",,,"115806.0","Office","191.2",,"1100 LAKE ST","1345.8",,,"11.62","-81.9",,"Shaker Management Shaker Management",,"100","1345.8"
+"2618229","1110 Pleasant Street","1110 Pleasant Street",,"R P FOX & ASSOC INC",,"51.27",,"1.2","75000.0","Hotel","42.52",,"139 S MARION ST","3845.0",,,"51.27","-92.1",,"Daniel Carleton","4.2","100","3845.0"
+"261909","Oak Park Towers","165 N Kenilworth Ave",,"Charles A Gutfeld",,"19.41","34.00","2.6","64409.0","Multifamily Housing","242.5",,"165 N KENILWORTH AVE",,"0.5",,,"-42.0","89","PATRICIA CAWLEY","57.3","98","1297.7"
+"261384698","Turano Baking Co Office","6500 Roosevelt Rd",,"TURANO BAKERY",,"13.80",,"107.4","9000.0","Office","445.8",,"6500 ROOSEVELT RD",,"0.2",,,"639.6",,"Michelle Muryn","385.5","1","124.2"
+"263232","South & Humphrey","37-49 South Blvd./ 103-11 S. Humphrey",,"OAK PARK RESIDENCE COR",52,"0.02","52.00","4.0","43446.0","Multifamily Housing","331.6",,"41 SOUTH BLVD",,,,,"23.4","100","Derek Darter",,"20","0.8"
+"263204","The Oaks","114 South Humphrey 328-330 Austin Blvd","All Electric","OAK PARK VILLAGE RES",74,"36.79","74.00","20.0","41020.0","Multifamily Housing","377.81",,"326 N AUSTIN BLVD",,"0.0",,,"16.0","87","Jenna Buehre","30.8","27","1509.0"
+"261636","Farrelly-Muriello Apartments","435 South Humphrey",,"GIDDINGS CORP",21,"34.05","21.00","2.9","20000.0","Multifamily Housing","52.46",,"435 S HUMPHREY AVE","626.0","1.0",,"69.56","-55.5","63","Jenna Buehre","121.7","100","681.0"
+"269472","Diana Condominium Association","142-144 S. Cuyler Ave. / 254-258 Pleasant St.",,,,"19.22","16.00","5.1","25240.0","Multifamily Housing",,,"142 S CUYLER AVE","485.0",,,"19.22",,,"Ryan Reid",,,"485.0"
+"269794","Cheney Mansion","220 N EUCLID AVE",,"OAK PARK PARK DISTRICT",,,,,"12000.0","Other - Public Services",,,"220 N EUCLID AVE",,,,,,,"Nelson Acevedo",,,
+"2613028","Oak Park Conservatory","615 GARFIELD ST",,"OAK PARK PARK DISTRICT",,,,,"86110.0","Other - Public Services",,,"615 GARFIELD ST",,,,,,,"Nelson Acevedo",,,
+"2618240","200 Home Association","200 Home Avenue / 951 Pleasant Street",,,,"13.24","12.00","7.7","19492.0","Multifamily Housing",,,"200 HOME AVE","258.0",,,"13.24",,,"Ryan Reid",,,"258.0"
+"2622020","1035-1049 Lake Street","1035-1049 Lake Street",,"DAVID KING & ASSOCIATES, INC.",,"7.03",,"11.6","14500.0","Office","78.97",,"1053 LAKE ST","102.0",,,"7.03","-22.7",,"Daniel Carleton","39.6","70","102.0"
+"2621989","Kenilworth Terrace Association","221-225 Kenilworth Ave.",,,,"9.25","78.00","4.8","260952.0","Multifamily Housing",,,"221 N KENILWORTH AVE","2414.0",,,"9.25",,"98","Ryan Reid",,,"2414.0"
+"2618170","Shaker Building 2","1101 LAKE OAK PARK",,"ES INV GRP LLC",,"6.10",,,"31620.0","Office","218.4",,"1101 LAKE OAK PARK","193.0",,,"6.10","-15.8",,"Shaker Management Shaker Management",,"62","193.0"
+"2622585","Gymnastics Recreation Center","21 LAKE ST",,"OAK PARK PARK DISTRICT",,"4.34",,,"18670.0","Other - Recreation","154.4",,"7 LAKE ST","81.0",,,"4.34","51.9",,"Nelson Acevedo",,,"81.0"
+"269311","Ridgeland Common Recreation Complex","415 Lake St",,"OAK PARK PARK DISTRICT",,"29.24",,,"53700.0","Ice/Curling Rink","676.7",,"415 LAKE ST",,,,,"193.0",,"Nelson Acevedo",,,"1228.0"
+"2615376","Oak Park Public Library - Main Branch","834 Lake St",,"OAK PARK LIBRARY",,,,,"137606.0","Library",,,"834 LAKE ST",,,,,,,"Matt Bartodziej",,,
+"269796","Linden Landmark Condo Association","175-181 N. Linden / 643-645 Ontario Street",,"LISA THORNTON",,"9.30","18.00","1.0","48056.0","Multifamily Housing",,,"167 LINDEN AVE","447.0",,,"9.30",,,"Ryan Reid",,,"447.0"
+"261654","433 Lombard Condo Association","433 S. Lombard",,"GREENPLAN 421 LOMBARD",,"24.70","21.00","7.0","32472.0","Multifamily Housing",,,"433 S LOMBARD AVE","802.0",,,"24.70",,"85","Ryan Reid",,,"802.0"
+"2618313","The Colonial House","211-213 N. Marion",,,,"113.86","13.00",,"3724.0","Multifamily Housing",,,"211 N MARION ST","424.0",,,"113.86",,,"Ryan Reid",,,"424.0"
+"264673",,"106 S Scoville Ave",,"EROL FERATOVIC",,,,,,,,,"104 S SCOVILLE AVE",,,,,,,,,,
+"2614991","Lu-Viola Condominium Association","815-821 Washington Blvd. / 408-410 S. Grove Ave.",,,,"14.83","18.00","1.2","54472.0","Multifamily Housing","134.7",,"815 WASHINGTON BLVD","808.0","0.5",,"14.83","-43.2",,"Ryan Reid","53.8",,"808.0"
+"2622053","Scoville Park Residences","156 N Oak Park Ave",,,,"16.15","28.00","2.6","68850.0","Multifamily Housing","179.1",,"156 N OAK PARK AVE",,,,,"-60.1","94","Paul Dickerson",,"100","1112.0"
+"269263","Easton Place Condominium","401-407 S. East Ave. / 601-613 Washington Blvd",,,,,"47.00","2.1","60512.0","Multifamily Housing","64.1",,"601 WASHINGTON BLVD",,"0.0",,,"-81.3",,"Ryan Reid","8.4","100",
+"2618311","Sanctuary of Oak Park Condos","1033 Ontario",,,,"12.86","34.00","2.1","75750.0","Multifamily Housing","79.8",,"1033 ONTARIO ST","974.0","0.0",,"12.86","-79.0","97","Ryan Reid","7.9","100","974.0"
+"2615387","12 Oaks Condominium Association","319-325 N. Oak Park Ave.",,"1ST UNITED METHODIST",,"1.57","12.00","9.9","25404.0","Multifamily Housing","117.9",,"325 N OAK PARK AVE","40.0","0.0",,"1.57","-17.9",,"Ryan Reid","38.0",,"40.0"
+"2614035","Wesley House Condominium Association","746 South Wesley",,,,"15.21","10.00","1.4","16300.0","Multifamily Housing","11.9",,"746 WESLEY AVE","248.0","0.0",,"15.21","-87.1",,"Ryan Reid","5.7",,"248.0"
+"269270","Elmwood Terrace Condo Association","405-409 S. Elmwood",,,,"22.98","10.00","3.6","12663.0","Multifamily Housing",,,"405 S ELMWOOD AVE","291.0",,,"22.98",,,"Ryan Reid",,,"291.0"
+"264241","1040 Ontario Condo Association","1040 Ontario St.",,,,"10.84","24.00","1.0","58472.0","Multifamily Housing",,,"1044 ONTARIO ST","634.0",,,"10.84",,"96","Ryan Reid",,,"634.0"
+"2617867","Wisconsin Windings Condo Association","417-425 Wisconsin",,,,"25.28","30.00","0.4","30000.0","Multifamily Housing","107.6",,"421 WISCONSIN AVE","758.3","0.7",,"25.28","-45.6","94","Tim Davis","69.8","99","758.3"
+"2621831","Maple Court Condo Association","240-246 S. Maple Ave.",,,,"24.16","34.00","2.7","38000.0","Multifamily Housing","52.4",,"240 S MAPLE AVE","918.0","0.0",,"24.16","-77.1","93","Ryan Reid","10.3","100","918.0"
+"2618137","Tara Hall Condo Association","1025 Randolph St.",,,,"11.59","43.00","1.2","110350.0","Multifamily Housing","187.4",,"1025 RANDOLPH ST","1279.0","0.2",,"11.59","-65.7","96","Ryan Reid","25.2","100","1279.0"
+"2622112","Niles on Marion Condo Association","101-107 S. Marion St.",,"DAVID CHUNG",,"34.11","13.00","7.2","15360.0","Multifamily Housing",,,"1101 SOUTH BLVD","524.0",,,"34.11",,,"Ryan Reid",,,"524.0"
+"2618226","Mills Park (mi035)","1033-1045 Pleasant Street",,"FOX PARTNERS LP",76,"29.44","76.00","3.7","52544.0","Multifamily Housing","363.3",,"1033 PLEASANT ST","1547.0","1.0",,"29.44","7.3","85","Sean Gallagher","108.2","39","1547.0"
+"264238","221 N. Marion Condominium Association","221 N. Marion St.",,,,,"9.00","2.9","13652.0","Multifamily Housing",,,"221 N MARION ST",,,,,,,"Ryan Reid",,,
+"2621735","Clarence Square Townhome Association","1192 Clarence Ave.",,"LARRY CROSBY",,"17.54","18.00","1.9","78000.0","Multifamily Housing",,,"1192 CLARENCE AVE","1368.0",,,"17.54",,,"Ryan Reid",,,"1368.0"
+"2622074","Terraces of Oak Park","101 N. Euclid Ave.",,,,,"34.00","4.6","70000.0","Multifamily Housing","304.9",,"101 N EUCLID AVE",,"0.4",,,"-32.9",,"Ryan Reid","56.4","93",
+"2615380","First Baptist Church of Oak Park","820 Ontario Street",,"1ST BAPTIST CH OAK PK",,"5.36",,"1.4","57020.0","Pre-school/Daycare","296.6",,"820 ONTARIO ST","305.4","0.9",,"5.36","-21.3",,"Eric Hogan","97.2",,"305.4"
+"261725","OPRC II LLC","426-428 N.Taylor Ave/59-61 Chicago Ave",,"OPRC II INC",,"0.03","16.00","2.6","17087.0","Multifamily Housing","104.68",,"426 N TAYLOR AVE",,"1.0",,,"3.7",,"OPRC LLC","105.1",,"0.5"
+"2621669","OPRF Infant Welfare Society","28 Madison St","This building was being remodeled from Jun 2021 to February 2022. We moved in as of March 1, 2022 with full occupancy.","OAK PARK INFANT WELFARE SOCIETY",,"1.08",,"19.9","13616.0","Medical Office","216.1",,"28 MADISON ST","14.7","1.2",,"1.08","66.6",,"John McIlwain","186.6","4","14.7"
+"2615266","150 S Oak Park Condo Association","150 S Oak Park Ave",,,,,"25.00",,"20000.0","Multifamily Housing",,,"150 S OAK PARK AVE",,,,,,,"Tim Davis",,,
+"2618637",,,,"CICCIO REALTY",,,,,,,,,"1142 CHICAGO AVE",,,,,,,,,,

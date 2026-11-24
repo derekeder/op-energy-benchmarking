@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  {% if page.maplibre %}<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">{% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  {{ content }}
+  {% if page.maplibre %}<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>{% endif %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script>
+    window.SITE = {
+      baseurl: "{{ site.baseurl }}",
+      years: {{ site.benchmarking_years | jsonify }}
+    };
+  </script>
+  {% for script in page.scripts %}
+  <script src="{{ script | relative_url }}"></script>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,59 @@
+---
+layout: default
+title: All buildings
+permalink: /buildings/
+scripts:
+  - /assets/js/data.js
+  - /assets/js/buildings.js
+---
+<main class="page">
+  <header class="page-header">
+    <h1>{{ site.title }}</h1>
+    <nav class="nav"><a href="{{ '/' | relative_url }}">Map</a> · <span aria-current="page">Building list</span></nav>
+  </header>
+
+  <p class="lede">
+    Every building covered by Oak Park's benchmarking ordinance, ordered by total greenhouse gas
+    emissions. Click a column heading to sort by it. Total emissions largely track building size, so floor area and site EUI
+    (energy use per square foot) are shown alongside. Buildings that didn't report are listed last.
+  </p>
+
+  <div class="list-controls">
+    <label class="field">
+      <span>Reporting year</span>
+      <select id="year-select">
+        {% for y in site.benchmarking_years reversed %}
+        <option value="{{ y }}">{{ y }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="field">
+      <span>Search</span>
+      <input type="search" id="search" placeholder="Name, address or owner">
+    </label>
+    <p class="hint" id="list-status"></p>
+  </div>
+
+  <div class="table-scroll">
+    <table class="buildings-table">
+      <thead>
+        <tr>
+          <th class="num" data-sort="rank"><button type="button">Rank</button></th>
+          <th data-sort="building"><button type="button">Building</button></th>
+          <th data-sort="type"><button type="button">Type</button></th>
+          <th class="num" data-sort="gfa"><button type="button">Floor area (ft²)</button></th>
+          <th class="num" data-sort="ghg"><button type="button">GHG (t CO2e)</button></th>
+          <th class="num" data-sort="eui"><button type="button">Site EUI (kBtu/ft²)</button></th>
+          <th class="num" data-sort="score"><button type="button">ENERGY STAR score</button></th>
+        </tr>
+      </thead>
+      <tbody id="buildings-body"></tbody>
+    </table>
+  </div>
+
+  <footer class="sources">
+    <a href="https://www.oak-park.us/Community/Sustainability-Resilience/Sustainability-Initiatives-Policies/Building-Benchmarking">Village benchmarking policy</a>
+    ·
+    <a href="https://oakpark-il.beam-portal.org/map/15/properties/">Data source (BEAM)</a>
+  </footer>
+</main>

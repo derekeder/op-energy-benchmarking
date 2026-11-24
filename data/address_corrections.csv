@@ -1,0 +1,53 @@
+address,corrected_address,pins,note
+1033 PLESANT ST,1033 PLEASANT ST,,typo
+104 S SCOVILE AVE,104 S SCOVILLE AVE,,typo
+730 CAPENTER AVE,730 CARPENTER AVE,,typo
+950 WASHINTON BLVD,950 WASHINGTON BLVD,,typo
+803 FILMORE ST,1151 S OAK PARK AVE,,typo; building is 1151-1153 S Oak Park Ave / 803-809 Fillmore St
+803 FILLMORE ST,1151 S OAK PARK AVE,,Assessor lists the building as 1151 S Oak Park Ave
+62235 W NORTH AVE,6235 NORTH AVE,,likely typo (extra digit); no other data in the row
+1101 LAKE OAK PARK,1101 LAKE ST,,Shaker Building 2; Address Line 1 gives 1101 Lake St
+1138 WASHINGTON AVE,1138 WASHINGTON BLVD,,wrong suffix
+114 S HUMPHREY BLVD,114 S HUMPHREY AVE,,wrong suffix
+440 N AUSTIN AVE,440 N AUSTIN BLVD,,wrong suffix
+615 WASHINGTON AVE,615 WASHINGTON BLVD,,wrong suffix; Weston Place Condo Association
+906 S HUMPHREY ST,906 S HUMPHREY AVE,,wrong suffix
+911 S HUMPHREY ST,911 S HUMPHREY AVE,,wrong suffix
+151 N KENILWORTH,151 N KENILWORTH AVE,,missing suffix
+420 S KENILWORTH,420 S KENILWORTH AVE,,missing suffix
+435 S HUMPHREY,435 S HUMPHREY AVE,,missing suffix
+720 WASHINGTON,720 WASHINGTON BLVD,,missing suffix
+900 N AUSTIN,900 N AUSTIN BLVD,,missing suffix; building is 902-910 N Austin Blvd
+901 WESLEY,901 WESLEY AVE,,missing suffix; building is 901-927 Wesley Ave
+637 GARFIELD ST,637 GARFIELD TER,,Garfield Terrace Condominium Association; Assessor uses GARFIELD TER
+120 N SCOVILLE AVE,460 LAKE ST,,Address Line 1 gives 460 Lake St
+139 S MARION ST,139 S MARION AVE,,"Assessor uses S MARION AVE (Address Line 1 gives 1110 Pleasant St, which has no Assessor record)"
+203 S MARION AVE,1105 PLEASANT ST,,Porter building; Address Line 1 gives 1105 Pleasant St
+1144 RANDOLPH ST,,1607307036,255 Maple; Assessor building at 235-237 S Maple matches self-reported size (0.2%)
+950 LAKE ST,150 FOREST AVE,,ReNew Oak Park; Address Line 1 gives 150 Forest Ave
+935 WASHINGTON BLVD,945 WASHINGTON AVE,,Clinton Court (935-943 Washington Blvd); Assessor lists it as 945 WASHINGTON AVE
+14 SUPERIOR ST,712 N AUSTIN BLVD,,Greenplan 710-712 N Austin Blvd
+38 N AUSTIN AVE,38 WASHINGTON BLVD,,Humphrey-Washington; Address Line 1 gives 38 Washington Blvd
+901 HIGHLAND AVE,301 HARRISON ST,,Harrison and Highland (301-11 Harrison / 901-09 S Highland)
+100 N EUCLID AVE,,1607225093,Main Fire Station (tax-exempt parcel)
+201 N SCOVILLE AVE,,1607221008,Oak Park and River Forest High School campus (tax-exempt parcel)
+137 SCOVILLE,,1607220004,OPRF garage; own tax-exempt parcel directly west of the high school campus (south of 1607214021)
+201 SOUTH BLVD,,1608302026,Public Works (tax-exempt parcel)
+325 S KENILWORTH AVE,,1607318017,Brooks Middle School (tax-exempt parcel)
+715 HIGHLAND AVE,,1617117028,Longfellow Elementary (tax-exempt parcel)
+715 N HARVEY,,1605309007,Whittier Elementary (tax-exempt parcel)
+921 N KENILWORTH,,1606124001,Mann Elementary (tax-exempt parcel)
+212 AUGUSTA ST,,1605310033,Augusta Fire Station; tax-exempt parcel at 214 Augusta - verify
+720 NORTH BLVD,,1607224025,The Avenue Garage; tax-exempt parcel near Oak Park Ave - verify
+259 LAKE ST,,1608125001,Pete's Fresh Market (PIN 16-08-125-001-0000)
+1 ERIE CT,,1608117013,geocoded point falls inside this parcel - verify
+3 ERIES ST,,1608117013,likely same property as 1 ERIE CT / 3 ERIE CT - verify
+942 PLEASANT ST,,1607303018 1607303016,PIN 16-07-303-018-0000; the 2021 parcel layer has its predecessor 1607303016
+427 S TAYLOR AVE,,1608321015,"Greenplan Properties XVI; Assessor building at 415 S Taylor matches self-reported 49,275 ft² exactly"
+130 N ELMWOOD AVE,,1607223019,"Greenplan 418 Lake; Assessor building at 422 Lake St matches self-reported 38,775 ft² exactly"
+426 S EUCLID AVE,,1607419029,Majestic Condo Association; Assessor condo at 426-428 S Euclid matches self-reported size (0.3%)
+255 S MAPLE AVE,,1607307036,255 Maple; Assessor building at 235-237 S Maple matches self-reported size (0.2%)
+628 HARRISON ST,,1618226037,Clarence and Harrison II; Assessor building at 628 Harrison matches self-reported size (2.8%)
+922 ONTARIO ST,,1607115053,"Greenplan Ontario; Assessor building at 922 Ontario matches self-reported 11,052 ft² exactly"
+924 ONTARIO ST,,1607115053,"Greenplan Ontario; Assessor building at 922 Ontario matches self-reported 11,052 ft² exactly"
+612 HARRISON ST,,1618227026,Clarence and Harrison I; Assessor building on same block matches self-reported size (4%) - verify
