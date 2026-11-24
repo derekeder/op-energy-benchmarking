@@ -97,8 +97,32 @@ body {
 .sources { border-top: 1px solid var(--border); margin-top: 18px; padding-top: 12px; font-size: 0.8rem; color: var(--text-muted); }
 .sources a { color: var(--text-secondary); }
 
+[hidden] { display: none !important; }
+
+/* Main area: map or list, switched by the floating view toggle. */
+.main { flex: 1; min-width: 0; position: relative; display: flex; }
 .map-wrap { flex: 1; min-width: 0; position: relative; }
 #map { position: absolute; inset: 0; }
+
+.view-toggle {
+  position: absolute; top: 12px; left: 12px; z-index: 5;
+  display: inline-flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+  background: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.view-toggle button {
+  font: inherit; font-size: 0.9rem; color: var(--text-secondary); background: none;
+  border: none; border-left: 1px solid var(--border); padding: 6px 16px; cursor: pointer;
+}
+.view-toggle button:first-child { border-left: none; }
+.view-toggle button:hover { color: var(--text-primary); background: #f4f3f0; }
+.view-toggle button[aria-checked="true"] { background: var(--text-primary); color: #fff; font-weight: 600; }
+.view-toggle button:focus-visible { outline: 2px solid var(--reported); outline-offset: -2px; }
+
+/* Search and notes stay put; only the table scrolls, so its header sticks. */
+.list-view { flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 60px 20px 20px; }
+.list-view .list-controls { margin: 0 0 8px; }
+.list-view .list-note { max-width: 70ch; margin: 0 0 12px; }
+.list-view .table-scroll { flex: 1; min-height: 0; overflow: auto; }
 
 .popup h3 { margin: 0 0 0.25rem; font-size: 1rem; }
 .popup table { border-collapse: collapse; font-size: 0.85rem; }
@@ -108,7 +132,10 @@ body {
 @media (max-width: 720px) {
   .app { flex-direction: column; height: auto; }
   .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 16px; }
+  .main { display: block; }
   .map-wrap { height: 70vh; flex: none; }
+  .list-view { display: block; padding: 60px 16px 24px; }
+  .list-view .table-scroll { overflow-x: auto; }
   .map-key { width: 180px; left: 8px; bottom: 24px; padding: 8px 10px; }
 }
 

@@ -417,6 +417,7 @@
     filterHint.hidden = !filters.length;
     document.getElementById("filter-hint-text").hidden =
       !filters.some(function (f) { return !f.size; });
+    OPList.render(year, rowsByYear[year] || [], rows, filters.length > 0);
     var unmapped = rows.length - geojson.features.length;
     statusEl.textContent = "Showing " + fmt(geojson.features.length) + " buildings" +
       (filters.length ? " matching the filters" : "") + "." +
@@ -429,7 +430,35 @@
     updateMap();
   }
 
-  select.addEventListener("change", function () { setYear(select.value); });
+  // ---------- map / list toggle ----------
+
+  // The view and year live in the URL (?view=list&year=2024) so links can point
+  // at either. /buildings/ redirects to ?view=list.
+  var params = new URLSearchParams(window.location.search);
+  var viewButtons = Array.prototype.slice.call(document.querySelectorAll(".view-toggle button"));
+
+  function syncURL() {
+    var q = new URLSearchParams(window.location.search);
+    if (params.get("view") === "list") q.set("view", "list"); else q.delete("view");
+    q.set("year", select.value);
+    history.replaceState(null, "", "?" + q.toString());
+  }
+
+  function setView(view) {
+    params.set("view", view);
+    viewButtons.forEach(function (b) { b.setAttribute("aria-checked", String(b.dataset.view === view)); });
+    document.getElementById("map-view").hidden = view !== "map";
+    document.getElementById("list-view").hidden = view !== "list";
+    if (view === "map") map.resize(); // the map was sized while hidden
+  }
+
+  viewButtons.forEach(function (b) {
+    b.addEventListener("click", function () { setView(b.dataset.view); syncURL(); });
+  });
+  if (params.get("year") && YEARS.indexOf(params.get("year")) !== -1) select.value = params.get("year");
+  setView(params.get("view") === "list" ? "list" : "map");
+
+  select.addEventListener("change", function () { setYear(select.value); syncURL(); });
   filterSelects.forEach(function (s) { s.addEventListener("change", updateMap); });
   document.getElementById("clear-filters").addEventListener("click", function () {
     filterSelects.forEach(function (s) { s.value = ""; });

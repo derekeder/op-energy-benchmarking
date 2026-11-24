@@ -3,12 +3,12 @@ layout: default
 maplibre: true
 scripts:
   - /assets/js/data.js
+  - /assets/js/list.js
   - /assets/js/map.js
 ---
 <div class="app">
   <aside class="sidebar">
     <h1>{{ site.title }}</h1>
-    <nav class="nav"><span aria-current="page">Map</span> · <a href="{{ '/buildings/' | relative_url }}">Building list</a></nav>
     <p class="lede">
       Oak Park requires owners of larger buildings to report their annual energy and water use
       through ENERGY STAR Portfolio Manager. This map shows each covered building and what it reported.
@@ -78,7 +78,12 @@ scripts:
       <a href="https://oakpark-il.beam-portal.org/map/15/properties/">Data source (BEAM)</a>
     </footer>
   </aside>
-  <div class="map-wrap">
+  <main class="main">
+  <div class="view-toggle" role="radiogroup" aria-label="View">
+    <button type="button" role="radio" data-view="map" aria-checked="true">Map</button>
+    <button type="button" role="radio" data-view="list" aria-checked="false">List</button>
+  </div>
+  <div class="map-wrap" id="map-view">
     <div id="map"></div>
     <div class="map-key" aria-label="Map legend">
       <h2>Greenhouse gas emissions</h2>
@@ -94,4 +99,34 @@ scripts:
       <p class="hint" id="map-status"></p>
     </div>
   </div>
+  <section class="list-view" id="list-view" hidden>
+    <div class="list-controls">
+      <label class="field">
+        <span>Search</span>
+        <input type="search" id="search" placeholder="Name, address or owner">
+      </label>
+      <p class="hint" id="list-status"></p>
+    </div>
+    <p class="hint list-note">
+      Ordered by total greenhouse gas emissions; click a column heading to sort. Rank is among every
+      building that reported this year. Buildings that didn't report are listed last.
+    </p>
+    <div class="table-scroll">
+      <table class="buildings-table">
+        <thead>
+          <tr>
+            <th class="num" data-sort="rank"><button type="button">Rank</button></th>
+            <th data-sort="building"><button type="button">Building</button></th>
+            <th data-sort="type"><button type="button">Type</button></th>
+            <th class="num" data-sort="gfa"><button type="button">Floor area (ft²)</button></th>
+            <th class="num" data-sort="ghg"><button type="button">GHG (t CO2e)</button></th>
+            <th class="num" data-sort="eui"><button type="button">Site EUI (kBtu/ft²)</button></th>
+            <th class="num" data-sort="score"><button type="button">ENERGY STAR score</button></th>
+          </tr>
+        </thead>
+        <tbody id="buildings-body"></tbody>
+      </table>
+    </div>
+  </section>
+  </main>
 </div>

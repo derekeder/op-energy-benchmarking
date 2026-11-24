@@ -53,7 +53,7 @@
   function notFound() {
     document.getElementById("building-title").textContent = "Building not found";
     document.getElementById("building-subtitle").innerHTML =
-      'No building with ID “' + esc(id) + '”. <a href="' + baseurl + '/buildings/">Browse all buildings</a>.';
+      'No building with ID “' + esc(id) + '”. <a href="' + baseurl + '/?view=list">Browse all buildings</a>.';
     document.querySelector(".building-top").hidden = true;
     document.querySelector(".building-years").hidden = true;
   }
